@@ -1,0 +1,259 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Push it behind the content */
+    --s: 96px; /* control the size*/
+    --c1: #331d08;
+    --c2: #210c06;
+    
+    --c: #0000 75%,var(--c1) 0;
+    --g1: conic-gradient(at 75% 25%,var(--c));
+    --g2: conic-gradient(at 25% 75%,var(--c));
+    background: 
+      var(--g1),var(--g1) var(--s) var(--s),
+      var(--g2),var(--g2) var(--s) var(--s) var(--c2);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+  }
+
+body {
+    background-color: #210c06;;
+    font-family: 'Tektur', sans-serif;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: crosshair;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pfp{
+    width:300px;
+    height:300px;
+    border: solid 3px #ffffff;
+    border-radius: 0px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.one{
+    margin-bottom: 10px;
+    letter-spacing: 7px;
+    user-select:all;
+    -webkit-user-select:text;
+}
+
+.contact-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contact-btn:hover {
+    color: #6b2c00;
+}
+
+.section-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.about {
+    width: 80%;    
+    max-width: 1400px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    user-select:all;
+    -webkit-user-select:text;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 95%;    
+}
+
+.project {
+    --s: 26px; /* control the size*/
+    --c1: #261605;
+    --c2: #130703;
+    
+    --c: #0000 75%,var(--c1) 0;
+    --g1: conic-gradient(at 75% 25%,var(--c));
+    --g2: conic-gradient(at 25% 75%,var(--c));
+    background: 
+      var(--g1),var(--g1) var(--s) var(--s),
+      var(--g2),var(--g2) var(--s) var(--s) var(--c2);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+    border: solid 2px #cab1b1;
+    border-radius: 2%;
+    aspect-ratio: 4 / 3; 
+    max-width: 250px;
+    margin: 20px;
+    padding-bottom: 35px;
+}
+
+.project:hover {
+    cursor: pointer;
+}
+
+.project-img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3; 
+    border-radius: 2%;
+    border-bottom: solid 1px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.project-name{
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    user-select:all;
+    -webkit-user-select:text;
+}
+
+
+/* Popup background */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative; /* Position relative to allow absolute positioning of close button */
+    background-color: #110704;
+    padding-bottom: 20px; /* Spacing inside the popup */
+    max-width: 950px; /* Max width of the popup */
+    width: 90%; /* Responsive width */
+    text-align: center; /* Center the text */
+    border: solid #ffffff 3px;
+    border-radius: 10px;
+    --s: 96px; /* control the size*/
+    --c1: #261605;
+    --c2: #130703;
+    
+    --c: #0000 75%,var(--c1) 0;
+    --g1: conic-gradient(at 75% 25%,var(--c));
+    --g2: conic-gradient(at 25% 75%,var(--c));
+    background: 
+      var(--g1),var(--g1) var(--s) var(--s),
+      var(--g2),var(--g2) var(--s) var(--s) var(--c2);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+/* Close button */
+.close {
+    position: absolute; /* Position the close button */
+    top: 10px; /* Space from the top */
+    right: 15px; /* Space from the right */
+    font-size: 24px; /* Size of the close button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Image styling */
+.popup-image {
+    width: 100%; /* Full width of the popup */
+    max-height: 560px; /* Max height for the image */
+    object-fit:scale-down; /* Maintain aspect ratio */
+    border-radius: 10px 10px 0px 0px; /* Rounded corners */
+
+}
+
+/* Project name styling */
+.popup-name {
+    font-size: 24px; /* Size of the project name */
+    margin: 15px 0 5px; /* Margin around the project name */
+    user-select:all;
+    -webkit-user-select:text;
+}
+
+/* Project description styling */
+.popup-description {
+    font-size: 16px; /* Size of the description */
+    color: #ffffff; /* Gray color for the description */
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+/* Navigation buttons */
+.navigation {
+    display: flex; /* Flex container for buttons */
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
+    margin-top: 15px; /* Space above buttons */
+}
+
+.nav-button {
+    background-color: #57331d; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside buttons */
+    font-size: 18px; /* Size of the button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.nav-button:hover {
+    background-color: #6b2c00; /* Darker blue on hover */
+}
+
+/* Hide navigation if there's only one image */
+.hide-navigation {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .about {
+        width: 100%;  
+    }
+    .popup-content {
+        flex-direction: column; /* Stack elements for mobile */
+    }
+
+    .popup-left {
+        order: 2; /* Move image section below name */
+    }
+
+    .popup-right {
+        order: 1; /* Move name section above image */
+    }
+
+    .popup-left img {
+        max-height: 300px; /* Reduce image height for mobile */
+    }
+}
+
+
+/* #E4E0E1 #D6C0B3 #AB886D #493628  */
