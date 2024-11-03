@@ -93,7 +93,7 @@ header {
 
 .project {
     --s: 26px; /* control the size*/
-    --c1: #261605;
+    --c1: #100901;
     --c2: #130703;
     
     --c: #0000 75%,var(--c1) 0;
