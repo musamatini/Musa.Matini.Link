@@ -68,7 +68,9 @@
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close" id="closePopup">&times;</span>
-            <img id="popup-image" src="" alt="Project Image" class="popup-image">
+            <a id="popup-image-link" href="" target="_blank">
+                <img id="popup-image" src="" alt="Project Image" class="popup-image">
+            </a>
             <h2 id="popup-name" class="popup-name"></h2>
             <p id="popup-description" class="popup-description"></p>
             <div class="navigation">
@@ -78,89 +80,70 @@
         </div>
     </div>
     
-
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close" id="closePopup">&times;</span>
-        <a id="popup-link" href="" target="_blank">
-            <img id="popup-image" src="" alt="Project Image" class="popup-image">
-        </a>
-        <h2 id="popup-name" class="popup-name"></h2>
-        <p id="popup-description" class="popup-description"></p>
-        <div class="navigation">
-            <button id="prevImage" class="nav-button">&lt;</button>
-            <button id="nextImage" class="nav-button">&gt;</button>
-        </div>
-    </div>
-</div>
-
-<script>
-    document.querySelectorAll('.project').forEach(project => {
-        project.addEventListener('click', function() {
-            const name = project.getAttribute('data-name');
-            const description = project.getAttribute('data-description');
-            const images = JSON.parse(project.getAttribute('data-images'));
-
-            // Set the first image and link
-            let currentIndex = 0;
-            const popupImage = document.getElementById('popup-image');
-            const popupLink = document.getElementById('popup-link');
-            popupImage.src = images[currentIndex];
-            popupLink.href = images[currentIndex];
-
-            // Update popup content
-            document.getElementById('popup-name').textContent = name;
-            document.getElementById('popup-description').textContent = description;
-
-            // Show the popup
-            const popup = document.getElementById('popup');
-            popup.style.display = 'flex';
-
-            // Navigation functions
-            const prevButton = document.getElementById('prevImage');
-            const nextButton = document.getElementById('nextImage');
-            
-            // Hide or show navigation buttons based on the number of images
-            if (images.length > 1) {
-                prevButton.classList.remove('hide-navigation');
-                nextButton.classList.remove('hide-navigation');
-            } else {
-                prevButton.classList.add('hide-navigation');
-                nextButton.classList.add('hide-navigation');
-            }
-
-            nextButton.onclick = function() {
-                currentIndex = (currentIndex + 1) % images.length;
+    <script>
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('click', function() {
+                const name = project.getAttribute('data-name');
+                const description = project.getAttribute('data-description');
+                const images = JSON.parse(project.getAttribute('data-images'));
+    
+                let currentIndex = 0;
+                const popupImage = document.getElementById('popup-image');
+                const popupImageLink = document.getElementById('popup-image-link');
+    
+                // Set the first image and link
                 popupImage.src = images[currentIndex];
-                popupLink.href = images[currentIndex];
-            };
-            prevButton.onclick = function() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                popupImage.src = images[currentIndex];
-                popupLink.href = images[currentIndex];
-            };
+                popupImageLink.href = images[currentIndex];
+    
+                // Update popup content
+                document.getElementById('popup-name').textContent = name;
+                document.getElementById('popup-description').textContent = description;
+    
+                // Show the popup
+                const popup = document.getElementById('popup');
+                popup.style.display = 'flex';
+    
+                // Navigation functions
+                const prevButton = document.getElementById('prevImage');
+                const nextButton = document.getElementById('nextImage');
+    
+                if (images.length > 1) {
+                    prevButton.classList.remove('hide-navigation');
+                    nextButton.classList.remove('hide-navigation');
+                } else {
+                    prevButton.classList.add('hide-navigation');
+                    nextButton.classList.add('hide-navigation');
+                }
+    
+                nextButton.onclick = function() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    popupImage.src = images[currentIndex];
+                    popupImageLink.href = images[currentIndex];
+                };
+                prevButton.onclick = function() {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    popupImage.src = images[currentIndex];
+                    popupImageLink.href = images[currentIndex];
+                };
+            });
         });
-    });
-
-    // Close the popup when clicking outside
-    document.getElementById('popup').onclick = function(event) {
-        if (event.target === this) {
-            this.style.display = 'none';
-        }
-    };
-
-    // Close the popup
-    document.getElementById('closePopup').onclick = function() {
-        document.getElementById('popup').style.display = 'none';
-    };
-
-    // Close the popup with ESC key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === "Escape") {
+    
+        document.getElementById('popup').onclick = function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        };
+    
+        document.getElementById('closePopup').onclick = function() {
             document.getElementById('popup').style.display = 'none';
-        }
-    });
-</script>
-
+        };
+    
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                document.getElementById('popup').style.display = 'none';
+            }
+        });
+    </script>
+    
 </body>
 </html>
