@@ -61,7 +61,7 @@ header {
     height: 100%;
     max-width: 80%;
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     text-align: left;
 
 }
@@ -82,8 +82,8 @@ header {
 }
 
 .pfp {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border: 3px solid #fff;
 }
 .one {
@@ -305,3 +305,13 @@ header {
         margin-bottom: 30px;
     }
 }
+@media (max-width: 550px) {
+    .one {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
