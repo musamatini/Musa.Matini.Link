@@ -173,7 +173,35 @@ function hidePopup() {
     const popup = document.getElementById('popup');
     popup.classList.remove("show");
 }
+        document.querySelectorAll('.project-inner').forEach(card => {
+    const height = card.clientHeight;
+    const width = card.clientWidth;
 
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const xRotation = 20 * ((y - height / 2) / height);
+        const yRotation = -20 * ((x - width / 2) / width);
+        
+        card.style.transform = `
+            perspective(2000px)
+            scale(1)
+            rotateX(${xRotation}deg)
+            rotateY(${yRotation}deg)
+        `;
+    });
+
+    card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0s ease';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.4s ease';
+        card.style.transform = 'perspective(10000px) rotateX(0deg) rotateY(0deg) scale(1)';
+    });
+});
 
     </script>
 </body>
