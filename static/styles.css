@@ -1,28 +1,5 @@
-
-.background {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1;
-        --s: 50px;
-        --c: #0c0908;
-        --_s: calc(2*var(--s)) calc(2*var(--s));
-        --_g: 35.36% 35.36% at;
-        --_c: #0000 66%,#201814 68% 70%,#0000 72%;
-        background: 
-          radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
-          radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
-          radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
-          radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
-          repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
-          radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-        background-attachment: fixed;
-        
-
-}
-
 body {
-    background-color: #0c0908;
+    background-color: #02090e;
     font-family: 'Tektur', sans-serif;
     color: #fff;
     padding: 0 10px;
@@ -31,6 +8,10 @@ body {
     align-items: center;
     cursor: crosshair;
     user-select: none;
+    background-image: url('/static/images/wallpaper2.jpg');  /* Set the image path */
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
 }
 .headerProjects  {
     animation: blurToClear 1s ease-out forwards;
@@ -58,14 +39,12 @@ body::-webkit-scrollbar {
   }
    
   body::-webkit-scrollbar-track {
-    background-color: #00000000;
-    border-radius: 0.1px;
+    background-color: #1c1f21;
   }
    
   body::-webkit-scrollbar-thumb {
     background-color: rgb(255, 255, 255);
     outline: 1px solid rgb(0, 0, 0);
-    border-radius: 5px;
   }
 
 header {
@@ -108,7 +87,7 @@ header {
 }
 
 .contact-btn {
-    color: #1d0600;
+    color: #1b252b;
     text-decoration: none;
     font-size: 25px;
     margin: 0 10px;
@@ -116,7 +95,7 @@ header {
 }
 
 .contact-btn:hover {
-    color: #300d05;
+    color: #0f4468;
 }
 
 .section-contact {
@@ -149,12 +128,15 @@ header {
 .project {
     aspect-ratio: 4 / 3;
     flex: 1 1 350px; /* Allow projects to grow and fill available space with a min width */
-    max-width: 350px; /* Ensure max width */
-    perspective: 500px;
+    max-width: 350px; 
+    perspective: 1000px;
     transform-style: preserve-3d;
     z-index: 1;
 }
-
+.project:hover {
+    cursor: pointer;
+    
+}
     
 
 .project-inner {
@@ -167,7 +149,6 @@ header {
     flex-direction: column;
     text-align: center;
     border: solid white 2px ;
-    border-radius: 10px;
     z-index: 1;
 }
 
@@ -175,7 +156,6 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
     transition: transform 0.1s ease;
 }
 
@@ -185,20 +165,10 @@ header {
     text-align: center;
     padding-top: 6px;
     padding-bottom: 6px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 10px 10px;
+    background: rgba(18, 23, 30, 0.89);
     backdrop-filter: blur(5px);
     min-width: 70%; 
     margin-top: -35px;
-}
-
-.project-inner.hover {
-    cursor: pointer;
-    transform: perspective(1000px);
-}
-
-.project-name::after {
-    z-index: -1;
 }
 
 .popup {
@@ -224,26 +194,16 @@ header {
 
 .popup-content {
     position: relative;
-    background-color: #110704;
+    background-color: #02090e;
     padding-bottom: 20px;
     max-width: 950px;
     width: 90%;
     text-align: center;
     border: 2px solid #fff;
-    border-radius: 13px;
-    --s: 50px;
-    --c: #0c0908;
-    --_s: calc(2*var(--s)) calc(2*var(--s));
-    --_g: 35.36% 35.36% at;
-    --_c: #0000 66%,#130e0c 68% 70%,#0000 72%;
-    background: 
-        radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
-        radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
-        radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
-        radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
-        repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
-        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-    background-attachment: fixed;
+    background-image: url('/static/images/wallpaper2.jpg');  /* Set the image path */
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
 }
 
 .close {
@@ -261,7 +221,7 @@ header {
     width: 100%;
     max-height: 560px;
     object-fit: scale-down;
-    border-radius: 10px 10px 0 0;
+    border-bottom: solid 2px white;
     
 }
 
@@ -284,10 +244,9 @@ header {
 }
 
 .nav-button {
-    background-color: #57331d;
+    background-color: #0a17317b;
     color: #fff;
     border: none;
-    border-radius: 5px;
     padding: 10px 15px;
     font-size: 18px;
     cursor: pointer;
@@ -295,7 +254,7 @@ header {
 }
 
 .nav-button:hover {
-    background-color: #6b2c00;
+    background-color: #0a1731d1;
 }
 
 .hide-navigation {
