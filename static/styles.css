@@ -1,3 +1,4 @@
+
 .background {
     position: fixed;
     top: 0; left: 0;
@@ -16,11 +17,23 @@
           repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
           radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
         background-attachment: fixed;
+        
+
 }
 
 body {
-    animation: blurToClear 0.6s ease-out forwards;
     background-color: #0c0908;
+    font-family: 'Tektur', sans-serif;
+    color: #fff;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: crosshair;
+    user-select: none;
+}
+.headerProjects  {
+    animation: blurToClear 1s ease-out forwards;
     font-family: 'Tektur', sans-serif;
     color: #fff;
     padding: 0 10px;
@@ -60,7 +73,7 @@ header {
     flex-direction:row;
     height: 100%;
     max-width: 80%;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 100px;
     text-align: left;
 
@@ -188,7 +201,6 @@ header {
     z-index: -1;
 }
 
-
 .popup {
     display: flex;
     visibility: hidden;
@@ -197,10 +209,12 @@ header {
     z-index: 1000;
     left: 0; top: 0;
     width: 100%; height: 100%;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    
 }
 
 .popup.show {
@@ -314,8 +328,3 @@ header {
         font-size: 18px;
     }
 }
-
-
-
-
-
