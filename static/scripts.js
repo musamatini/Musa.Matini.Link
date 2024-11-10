@@ -77,10 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showPopup() {
         popup.classList.add("show");
+        document.body.style.overflow = 'hidden';
     }
 
     function hidePopup() {
         popup.classList.remove("show");
+        document.body.style.overflow = 'auto';
     }
 
     // Optimize card animations using RequestAnimationFrame
