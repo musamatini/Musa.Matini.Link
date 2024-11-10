@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showPopup() {
         popup.classList.add("show");
         document.body.style.overflow = 'hidden';
+
     }
 
     function hidePopup() {
@@ -104,8 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const yRotation = -20 * ((x - width / 2) / width);
 
                 card.style.transform = `
-                    perspective(2000px)
-                    scale(1)
+                    perspective(1500px)
                     rotateX(${xRotation}deg)
                     rotateY(${yRotation}deg)
                 `;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 rafId = null;
             }
             card.style.transition = 'transform 0.4s ease';
-            card.style.transform = 'perspective(10000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            card.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg)';
         });
     });
 });
