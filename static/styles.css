@@ -163,6 +163,7 @@ header {
     color: #fff;
     font-size: 18px;
     text-align: center;
+<<<<<<< HEAD
     padding-top: 5px;
     padding-bottom: 5px;
     background: rgba(18, 23, 30, 0.89);
@@ -173,6 +174,14 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
+=======
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: rgba(18, 23, 30, 0.89);
+    backdrop-filter: blur(5px);
+    min-width: 70%; 
+    margin-top: -35px;
+>>>>>>> 58db86cfeda879716453bec9e632196979af495d
 }
 
 .popup {
@@ -265,6 +274,7 @@ header {
     display: none;
 }
 
+<<<<<<< HEAD
 .language-popup {
     position: fixed;
     top: 0;
@@ -305,6 +315,8 @@ header {
 }
 
 
+=======
+>>>>>>> 58db86cfeda879716453bec9e632196979af495d
 @media (max-width: 1010px) {
     header {
         flex-direction:column ;
