@@ -1,15 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Cache DOM elements that are frequently accessed
     const popup = document.getElementById('popup');
-<<<<<<< HEAD
-    const popupImage = document.querySelector('.popup-image');
-    if (!popupImage) {
-        console.warn("Popup image element not found.");
-        return;
-    }
-=======
     const popupImage = document.getElementById('popup-image');
->>>>>>> 58db86cfeda879716453bec9e632196979af495d
     const popupImageLink = document.getElementById('popup-image-link');
     const popupName = document.getElementById('popup-name');
     const popupDescription = document.getElementById('popup-description');
