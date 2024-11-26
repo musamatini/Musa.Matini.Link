@@ -131,9 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     const buttons = document.querySelectorAll(".language-btn");
 
-    // Show the popup on page load
-    .style.display = "flex";
-
     // Handle language selection
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
