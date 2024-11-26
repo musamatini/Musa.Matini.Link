@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Cache DOM elements that are frequently accessed
     const popup = document.getElementById('popup');
-    const popupImage = document.getElementById('popup-image');
+    const popupImage = document.querySelector('.popup-image');
     const popupImageLink = document.getElementById('popup-image-link');
     const popupName = document.getElementById('popup-name');
     const popupDescription = document.getElementById('popup-description');
@@ -127,6 +127,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             card.style.transition = 'transform 0.4s ease';
             card.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg)';
+        });
+    });
+    const popup2 = document.getElementById("languagePopup");
+    const buttons = document.querySelectorAll(".language-btn");
+
+    // Show the popup on page load
+    popup2.style.display = "flex";
+
+    // Handle language selection
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const lang = button.dataset.lang;
+            if (lang === "tr") {
+                window.location.href = "index-tr.html";
+            } else if (lang === "ar") {
+                window.location.href = "index-ar.html";
+            } else {
+                window.location.href = "index-en.html";
+            }
         });
     });
 });
