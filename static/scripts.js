@@ -129,11 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg)';
         });
     });
-    const popup2 = document.getElementById("languagePopup");
     const buttons = document.querySelectorAll(".language-btn");
 
     // Show the popup on page load
-    popup2.style.display = "flex";
+    .style.display = "flex";
 
     // Handle language selection
     buttons.forEach((button) => {
