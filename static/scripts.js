@@ -129,26 +129,4 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg)';
         });
     });
-<<<<<<< HEAD
-    const popup2 = document.getElementById("languagePopup");
-    const buttons = document.querySelectorAll(".language-btn");
-
-    // Show the popup on page load
-    popup2.style.display = "flex";
-
-    // Handle language selection
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const lang = button.dataset.lang;
-            if (lang === "tr") {
-                window.location.href = "index-tr.html";
-            } else if (lang === "ar") {
-                window.location.href = "index-ar.html";
-            } else {
-                window.location.href = "index-en.html";
-            }
-        });
-    });
-=======
->>>>>>> 58db86cfeda879716453bec9e632196979af495d
 });
