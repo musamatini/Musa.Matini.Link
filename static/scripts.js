@@ -1,6 +1,6 @@
 window.onload = () => {
     const preloader = document.getElementById('preloader');
-    const content = document.getElementById('content');
+    const content = document.getElementById('body');
 
     // Preload images
     const images = document.querySelectorAll('img');
