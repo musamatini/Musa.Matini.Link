@@ -1,3 +1,25 @@
+window.onload = () => {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Preload images
+    const images = document.querySelectorAll('img');
+    const totalImages = images.length;
+    let loadedImages = 0;
+
+    images.forEach(img => {
+        const tempImage = new Image();
+        tempImage.src = img.src;
+        tempImage.onload = () => {
+            loadedImages++;
+            if (loadedImages === totalImages) {
+                preloader.style.display = 'none';
+                content.style.display = 'block';
+            }
+        };
+    });
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     // Cache DOM elements that are frequently accessed
     const popup = document.getElementById('popup');
