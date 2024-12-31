@@ -77,20 +77,22 @@
     </div>
 
     <script>
-        document.querySelectorAll('.lang-btn').forEach(button => {
+          document.querySelectorAll('.lang-btn').forEach(button => {
             button.addEventListener('click', () => {
-                const selectedLang = button.getAttribute('data-lang');
-                window.location.href = `${selectedLang}`;
+              const selectedLang = button.getAttribute('data-lang');
+              window.location.href = `${selectedLang}`;
             });
-        });
+          });
+        
           const lang = navigator.language || navigator.userLanguage; // Get browser's language
           if (lang.startsWith('tr')) {
             window.location.href = "/tr";
-          } else if (lang.startsWith('ar")) {
+          } else if (lang.startsWith('ar')) { // Corrected this line (removed the extra quote)
             window.location.href = "/ar";
           } else {
             window.location.href = "/en";
           }
     </script>
+
 </body>
 </html>
