@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Main page URL -->
     <url>
         <loc>https://musa.matini.link/</loc>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
     </url>
+
+    <!-- Turkish language page -->
     <url>
-        <loc>https://musa.matini.link/index-en.html</loc>
+        <loc>https://musa.matini.link/tr</loc>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
     </url>
+
+    <!-- English language page -->
     <url>
-        <loc>https://musa.matini.link/index-tr.html</loc>
+        <loc>https://musa.matini.link/en</loc>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
     </url>
+
+    <!-- Arabic language page -->
     <url>
-        <loc>https://musa.matini.link/index-ar.html</loc>
+        <loc>https://musa.matini.link/ar</loc>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
     </url>
+
 </urlset>
