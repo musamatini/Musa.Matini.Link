@@ -35,59 +35,15 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-
-        .lang-container {
-            text-align: center;
-            color: white;
-        }
-
-        .lang-options {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .lang-btn {
-            background: #ffffff22;
-            color: white;
-            border: 2px solid white;
-            padding: 1rem 2rem;
-            font-size: 1.5rem;
-            border-radius: 0px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            background: white;
-            color: #0f4468;
-        }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="lang-container">
-        <div class="lang-options">
-            <button class="lang-btn" data-lang="en">English</button>
-            <button class="lang-btn" data-lang="ar">العربية</button>
-            <button class="lang-btn" data-lang="tr">Türkçe</button>
-        </div>
-    </div>
-
     <script>
-          document.querySelectorAll('.lang-btn').forEach(button => {
-            button.addEventListener('click', () => {
-              const selectedLang = button.getAttribute('data-lang');
-              window.location.href = `${selectedLang}`;
-            });
-          });
         
-          const lang = navigator.language || navigator.userLanguage; // Get browser's language
+          const lang = navigator.language || navigator.userLanguage;
           if (lang.startsWith('tr')) {
             window.location.href = "/tr";
-          } else if (lang.startsWith('ar')) { // Corrected this line (removed the extra quote)
+          } else if (lang.startsWith('ar')) { 
             window.location.href = "/ar";
           } else {
             window.location.href = "/en";
