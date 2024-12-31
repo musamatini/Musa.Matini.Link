@@ -2,7 +2,6 @@ body {
     background-color: #02090e;
     font-family: 'Tektur', sans-serif;
     color: #fff;
-    padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +17,6 @@ body {
     animation: blurToClear 1s ease-out forwards;
     font-family: 'Tektur', sans-serif;
     color: #fff;
-    padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,6 +309,7 @@ header {
         flex-direction:column ;
         text-align: center;
         margin-bottom: 50px;
+        max-width: 95%;
     }
     .sectionRight {
         margin: 0;
@@ -323,6 +322,8 @@ header {
         margin: 0;
         margin-bottom: 20px;
     }
+    .about {
+        font-size: 20px;
 }
 @media (max-width: 550px) {
     .one {
