@@ -82,6 +82,14 @@
                 window.location.href = `${selectedLang}`;
             });
         });
+          const lang = navigator.language || navigator.userLanguage; // Get browser's language
+          if (lang.startsWith('tr')) {
+            window.location.href = "/tr";
+          } else if (lang.startsWith('ar")) {
+            window.location.href = "/ar";
+          } else {
+            window.location.href = "/en";
+          }
     </script>
 </body>
 </html>
