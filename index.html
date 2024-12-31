@@ -79,7 +79,7 @@
         document.querySelectorAll('.lang-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const selectedLang = button.getAttribute('data-lang');
-                window.location.href = `index-${selectedLang}.html`;
+                window.location.href = `${selectedLang}`;
             });
         });
     </script>
