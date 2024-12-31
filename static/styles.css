@@ -110,7 +110,7 @@ header {
 .about {
     font-size: 22px;
     letter-spacing: 2px;
-    white-space: pre-wrap;
+    hyphens: auto;
     word-wrap: break-word;
 }
 
