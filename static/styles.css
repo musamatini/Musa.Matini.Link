@@ -7,16 +7,14 @@ body {
     align-items: center;
     cursor: crosshair;
     user-select: none;
-    background-image: url('/static/images/wallpaper2.jpg');  /* Set the image path */
-    background-size: cover;  /* Ensures the image covers the entire screen */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-image: url('/static/images/wallpaper2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 .headerProjects  {
     animation: blurToClear 1s ease-out forwards;
-    font-family: 'Tektur', sans-serif;
-    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,17 +115,17 @@ header {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center all items */
-    gap: 50px; /* Adjust as needed */
-    max-width: 95%; /* Ensure full width usage */
-    margin: 0 auto; /* Center the container */
+    justify-content: center; 
+    gap: 50px;
+    max-width: 95%; 
+    margin: 0 auto; 
     z-index: 1;
     margin-bottom: 50px;
 }
 
 .project {
     aspect-ratio: 4 / 3;
-    flex: 1 1 350px; /* Allow projects to grow and fill available space with a min width */
+    flex: 1 1 350px;
     max-width: 350px; 
     perspective: 1000px;
     transform-style: preserve-3d;
