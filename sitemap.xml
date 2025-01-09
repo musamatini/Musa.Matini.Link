@@ -4,38 +4,38 @@
 
     <!-- Main page URL -->
     <url>
-        <loc>https://musa.matini.link/</loc>
+        <loc>https://musa.matini.site/</loc>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
-        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.site/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.site/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.site/ar" />
     </url>
 
     <!-- Turkish language page -->
     <url>
-        <loc>https://musa.matini.link/tr</loc>
+        <loc>https://musa.matini.site/tr</loc>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
-        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.site/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.site/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.site/ar" />
     </url>
 
     <!-- English language page -->
     <url>
-        <loc>https://musa.matini.link/en</loc>
+        <loc>https://musa.matini.site/en</loc>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
-        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.site/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.site/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.site/ar" />
     </url>
 
     <!-- Arabic language page -->
     <url>
-        <loc>https://musa.matini.link/ar</loc>
+        <loc>https://musa.matini.site/ar</loc>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
-        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.site/tr" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.site/en" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.site/ar" />
     </url>
 
 </urlset>
