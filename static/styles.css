@@ -110,7 +110,6 @@ header {
     letter-spacing: 2px;
     hyphens: auto;
     word-wrap: break-word;
-    text-align: justify;
 }
 
 .projects {
@@ -324,6 +323,7 @@ header {
     }
     .about {
         font-size: 20px;
+        text-align: justify;
 }
 @media (max-width: 550px) {
     .one {
