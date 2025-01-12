@@ -324,7 +324,7 @@ header {
     .about {
         font-size: 20px;
         text-align: justify;
-        padding: 0px 10px 0px 10px;
+        
     }
 }
 @media (max-width: 550px) {
@@ -333,6 +333,7 @@ header {
     }
     .about {
         font-size: 18px;
+        padding: 0 10px 0 10px;
     }
     .pfp {
         width: 300px;
