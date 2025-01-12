@@ -324,6 +324,7 @@ header {
     .about {
         font-size: 20px;
         text-align: justify;
+    }
 }
 @media (max-width: 550px) {
     .one {
