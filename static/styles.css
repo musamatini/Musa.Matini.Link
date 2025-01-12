@@ -110,6 +110,7 @@ header {
     letter-spacing: 2px;
     hyphens: auto;
     word-wrap: break-word;
+    text-align: justify;
 }
 
 .projects {
