@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.g/static.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <link rel="preload" href="/static/images/me4.jpeg" as="image">
     <link rel="preload" href="/static/images/projectImages/homiesTracker/thumb.jpeg" as="image">
     <link rel="preload" href="/static/images/projectImages/oldWebsite/thumb.jpeg" as="image">
@@ -71,12 +72,22 @@
             </div>
             <div class="sectionRight">
                 <h1 class="one">موسى متيني</h1>
+                <div class="langSelector">
+                    <a href="/en" lang="en" class="lang">EN</a>
+                    <a href="/tr" lang="en" class="lang">TR</a>
+                    <a href="/ar" lang="en" class="selectedLang">AR</a>
+                </div>
                 <div class="about">أنا مبرمج شاب شغوف بالبرمجة منذ الطفولة. حالياً، أنا طالب في المدرسة الثانوية ومطور مبتدئ مقيم في إسطنبول، تركيا. لدي مهارات في تطوير الويب و بايثون، بالإضافة إلى خبرة في C و C++ و Kotlin. بينما أعتبر نفسي سريع التعلم، فإنني أعي أن هناك دائماً المزيد للتعلم. أنا مرتاح مع نظام لينكس واستخدام الطرفية. رغم أنني لست موظفاً حالياً، إلا أنني أعمل على تحسين مهاراتي. أتكلم الإنجليزية والعربية والتركية، وقد أتعلم الروسية قريباً. بعض من مشاريعي هي:</div>
             </div>
             
         </header>
         <style>
-            
+            body {
+                font-family: "Cairo", serif;
+            }
+            :lang(en) {
+                font-family: 'Tektur', sans-serif;
+            }
             header {
                 text-align: right;
             }
@@ -92,6 +103,13 @@
             }
             .about {
                 letter-spacing:normal;
+            }
+            .langSelector {
+                justify-content: end;
+            }
+            .project-name {
+                padding-top: 0;
+                padding-bottom: 4px;
             }
     
         @media (max-width: 1010px) {
@@ -123,10 +141,10 @@
         }
         </style>
         <div class="projects">
-            <div class="project" data-name="Homies Tracker" data-description="هذا تطبيق قمت بإنشائه باستخدام Kotlin في Android Studio. يتتبع هذا التطبيق المسافة بيني وبين أصدقائي بحيث يمكن لكل منا معرفة المسافة بينه وبين الآخرين. تم اختبار التطبيق وكان يعمل بشكل جيد." data-images='["/static/images/projectImages/homiesTracker/1.jpeg"]'>
+            <div class="project" data-name="متتبع الأصدقاء" data-description="هذا تطبيق قمت بإنشائه باستخدام Kotlin في Android Studio. يتتبع هذا التطبيق المسافة بيني وبين أصدقائي بحيث يمكن لكل منا معرفة المسافة بينه وبين الآخرين. تم اختبار التطبيق وكان يعمل بشكل جيد." data-images='["/static/images/projectImages/homiesTracker/1.jpeg"]'>
                 <div class="project-inner">
                     <img src="/static/images/projectImages/homiesTracker/thumb.jpeg" alt="صورة قابلة للنقر لمشروعي، Homies Tracker." class="project-img" draggable="false">
-                    <h2 class="project-name">Homies Tracker</h2>
+                    <h2 class="project-name">متتبع الأصدقاء</h2>
                 </div>
             </div>
             <div class="project" data-name="موقعي القديم" data-description="موقعي الشخصي القديم الذي كان يفتقر إلى الاستجابة، مما دفعني لإنشاء هذا الموقع الجديد." data-images='["/static/images/projectImages/oldWebsite/1.jpeg"]'>
