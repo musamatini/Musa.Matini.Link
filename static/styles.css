@@ -92,24 +92,27 @@ header {
 }
 
 .contact-btn:hover {
-    color: #0f4468;
+    color: #6d5959;
 }
 
 .section-contact {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    align-items: center;
+    
+}
+
+.contact-buttons {
     background-color: #FFFFFF;
     border: solid #FFFFFF 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .about {
     font-size: 22px;
     letter-spacing: 2px;
-    hyphens: auto;
-    word-wrap: break-word;
+    text-align: justify;
 }
 
 .projects {
@@ -163,8 +166,8 @@ header {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    background: rgba(18, 23, 30, 0.89);
-    backdrop-filter: blur(5px);
+    background: rgba(12, 16, 21, 0.284);
+    backdrop-filter: blur(10px);
     min-width: 70%; 
     margin: 0;
     position: fixed;
@@ -263,47 +266,27 @@ header {
     display: none;
 }
 
-.language-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.langSelector {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    flex-direction: row;
+    gap: 10px;
+    width:100%;
 }
 
-.language-popup .popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+.lang, .lang:visited, .selectedLang, .selectedLang:visited {
+    text-decoration: none;
+    color: #ffc6c6;
 }
 
-.language-popup .language-options {
-    margin-top: 20px;
+.lang:hover, .lang:visited:hover, .selectedLang:hover, .selectedLang:visited:hover {
+    color: #ff0f0f;
 }
 
-.language-popup .language-btn {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+.selectedLang, .selectedLang:visited {
+    color: #ff5656;
 }
 
-.language-popup .language-btn:hover {
-    background: #ddd;
-}
-
-
-@media (max-width: 1010px) {
+@media (max-width: 1250px) {
     header {
         flex-direction:column ;
         text-align: center;
@@ -337,5 +320,10 @@ header {
     .pfp {
         width: 300px;
         height: 300px;
+    }
+}
+@media (max-width: 350px) {
+    .contact-btn {
+        margin: 0 8px;
     }
 }
