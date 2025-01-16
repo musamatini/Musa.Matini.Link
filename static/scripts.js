@@ -144,4 +144,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // List of profile pictures
+    const profilePictures = [
+        "/static/images/me4.jpeg",
+        "/static/images/me1.jpeg",
+        "/static/images/me2.jpeg",
+        "/static/images/me3.jpeg"
+    ];
+    
+    // Initial index
+    let currentIndex = 0;
+    
+    // Get the profile picture element
+    const pfp = document.getElementById("pfp");
+    
+    // Add click event listener
+    pfp.addEventListener("click", () => {
+        // Increment the index
+        currentIndex = (currentIndex + 1) % profilePictures.length;
+    
+        // Update the `src` attribute to the next image
+        pfp.src = profilePictures[currentIndex];
+    });
+
 });
