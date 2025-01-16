@@ -147,9 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // List of profile pictures
     const profilePictures = [
         "/static/images/me4.jpeg",
-        "/static/images/me1.jpeg",
-        "/static/images/me2.jpeg",
-        "/static/images/me3.jpeg"
+        "/static/images/me3.jpeg",
+        "/static/images/me2.jpeg"
     ];
     
     // Initial index
