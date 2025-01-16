@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     // Initial index
-    let currentIndex = 0;
+    let currentIndex1 = 0;
     
     // Get the profile picture element
     const pfp = document.getElementById("pfp");
@@ -161,10 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event listener
     pfp.addEventListener("click", () => {
         // Increment the index
-        currentIndex = (currentIndex + 1) % profilePictures.length;
+        currentIndex1 = (currentIndex1 + 1) % profilePictures.length;
     
         // Update the `src` attribute to the next image
-        pfp.src = profilePictures[currentIndex];
+        pfp.src = profilePictures[currentIndex1];
     });
 
 });
