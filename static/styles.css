@@ -49,7 +49,7 @@ header {
     height: 100%;
     max-width: 80%;
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     text-align: left;
 
 }
@@ -124,6 +124,7 @@ header {
     z-index: 1;
     margin-bottom: 50px;
 }
+
 
 .project {
     aspect-ratio: 4 / 3;
@@ -284,7 +285,9 @@ header {
 .selectedLang, .selectedLang:visited {
     color: #ff5656;
 }
-
+.title {
+    margin-bottom: 30px;
+}
 @media (max-width: 1250px) {
     header {
         flex-direction:column ;
