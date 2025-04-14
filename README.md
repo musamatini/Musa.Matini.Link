@@ -8,6 +8,7 @@ Check it out here: [https://musa.matini.link](https://musa.matini.link)
 
 ## 🤝 Connect With Me
 
+- Mail: [musamat00@gmail.com](musamat00@gmail.com)
 - GitHub: [@musamatini](https://github.com/musamatini)  
 - Twitter: [@MusaAhmadMatini](https://twitter.com/MusaAhmadMatini)  
 - Instagram: [@musa_matini](https://www.instagram.com/musa_matini/)  
