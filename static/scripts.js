@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function setImage(imageSrc) {
         popupImage.classList.add("loading");
         popupImage.src = imageSrc;
-        popupImageLink.href = imageSrc;
+        // The popupImageLink.href will be set in handleProjectClick
     }
 
     // Single event listener for image load
@@ -38,38 +38,65 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleProjectClick(project) {
         const name = project.getAttribute('data-name');
         const description = project.getAttribute('data-description');
+        const externalImageLink = project.getAttribute('data-external-link-image');
         currentImages = JSON.parse(project.getAttribute('data-images'));
         currentIndex = 0;
 
         // Reset and set initial state
         popupImage.src = '';
-        popupImageLink.href = '';
-        setImage(currentImages[currentIndex]);
+        popupImageLink.href = ''; // Reset the link
+
+        if (externalImageLink && currentImages.length > 0) {
+            popupImageLink.href = externalImageLink; // Set external link
+            setImage(currentImages?.[currentIndex]);
+        } else if (currentImages.length > 0) {
+            popupImageLink.href = currentImages?.[currentIndex]; // Default image link
+            setImage(currentImages?.[currentIndex]);
+        }
 
         // Update content
         popupName.textContent = name;
         popupDescription.textContent = description;
 
         // Update navigation visibility
-        const hasMultipleImages = currentImages.length > 1;
+        const hasMultipleImages = currentImages?.length > 1;
         nextImage.style.display = hasMultipleImages ? 'inline-block' : 'none';
         prevImage.style.display = hasMultipleImages ? 'inline-block' : 'none';
 
         showPopup();
     }
 
-    // Navigation handlers
+    // Navigation handlers (no change needed)
     nextImage.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % currentImages.length;
-        setImage(currentImages[currentIndex]);
+        // For now, navigation will still point to the image source.
+        // If you have multiple images and want different external links for each,
+        // you'd need a more complex data structure.
+        if (projectCurrentlyHasExternalLink()) {
+            popupImageLink.href = document.querySelector('.project.show-popup')?.getAttribute('data-external-link-image') || currentImages?.[currentIndex];
+        } else {
+            popupImageLink.href = currentImages?.[currentIndex];
+        }
+        setImage(currentImages?.[currentIndex]);
     });
 
     prevImage.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-        setImage(currentImages[currentIndex]);
+        // Similar logic as nextImage
+        if (projectCurrentlyHasExternalLink()) {
+            popupImageLink.href = document.querySelector('.project.show-popup')?.getAttribute('data-external-link-image') || currentImages?.[currentIndex];
+        } else {
+            popupImageLink.href = currentImages?.[currentIndex];
+        }
+        setImage(currentImages?.[currentIndex]);
     });
 
-    // Close handlers
+    // Helper function to check if the currently open popup has an external link
+    function projectCurrentlyHasExternalLink() {
+        return document.querySelector('.project.show-popup')?.hasAttribute('data-external-link-image');
+    }
+
+    // Close handlers (no change needed)
     closePopup.addEventListener('click', hidePopup);
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') hidePopup();
@@ -77,12 +104,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showPopup() {
         popup.classList.add("show");
+        // Add a class to the project div when its popup is shown, to easily reference it
+        const projectName = document.querySelector(`#popup-name`).textContent;
+        document.querySelectorAll('.project').forEach(proj => {
+            proj.classList.remove('show-popup');
+            if (proj.getAttribute('data-name') === projectName) {
+                proj.classList.add('show-popup');
+            }
+        });
         document.body.style.overflow = 'hidden';
-
     }
 
     function hidePopup() {
         popup.classList.remove("show");
+        document.querySelectorAll('.project').forEach(proj => proj.classList.remove('show-popup'));
         document.body.style.overflow = 'auto';
     }
 
