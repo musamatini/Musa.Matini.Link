@@ -177,6 +177,9 @@ header {
 }
 
 .popup {
+    font-family: 'Tektur', sans-serif;
+    color: #fff;
+    cursor: crosshair;  
     display: flex;
     visibility: hidden;
     opacity: 0;
@@ -189,7 +192,6 @@ header {
     justify-content: center;
     align-items: center;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    
 }
 
 .popup.show {
