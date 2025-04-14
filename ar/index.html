@@ -43,6 +43,20 @@
     <script src="/static/scripts.js"></script>
     <link rel="icon" type="image/png" href="/favicon.png">
 </head>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <a id="popup-image-link" href="" target="_blank">
+            <img id="popup-image" src="" alt="Project Image" class="popup-image">
+        </a>
+        <h2 id="popup-name" class="popup-name"></h2>
+        <p id="popup-description" class="popup-description"></p>
+        <div class="navigation">
+            <button id="prevImage" class="nav-button">&lt;</button>
+            <button id="nextImage" class="nav-button">&gt;</button>
+        </div>
+    </div>
+</div>
 <body dir="rtl">
     <div class="background"></div>
     <div class="headerProjects">
@@ -204,21 +218,6 @@
                 <div class="project-inner">
                     <img src="/static/images/projectImages/CS50P/CS50P.jpeg" alt="صورة لشهادة CS50 الخاصة بي" class="project-img" draggable="false">
                     <h2 class="project-name">CS50P Certificate</h2>
-            </div>
-        </div>
-    </div>
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <a id="popup-image-link" href="" target="_blank">
-                <img id="popup-image" src="" alt="Project Image" class="popup-image">
-            </a>
-            <h2 id="popup-name" class="popup-name"></h2>
-            <p id="popup-description" class="popup-description"></p>
-            <div class="navigation">
-                <button id="prevImage" class="nav-button">&lt;</button>
-                <button id="nextImage" class="nav-button">&gt;</button>
             </div>
         </div>
     </div>
