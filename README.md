@@ -14,7 +14,7 @@ Check it out here: [https://musa.matini.link](https://musa.matini.link)
 - Discord: [Musa Matini](https://discordapp.com/users/748620553530769440)  
 - LinkedIn: [Musa Matini](https://www.linkedin.com/in/musamatini)
 
-## 🙏 Thanks for Visiting
+## 💐 Thank You for Visiting
 
      
 ‎ 
