@@ -143,6 +143,7 @@ def build():
     shutil.copy('templates/index.html', os.path.join(DIST_DIR, 'index.html'))
     shutil.copy('favicon.png', os.path.join(DIST_DIR, 'favicon.png'))
     shutil.copy('googleec5f59a1e99626bf.html', os.path.join(DIST_DIR, 'googleec5f59a1e99626bf.html'))
+    shutil.copy('robots.txt', os.path.join(DIST_DIR, 'robots.txt'))
     
     # Call the new sitemap generator function
     generate_sitemap(languages)
