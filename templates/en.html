@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I Am Musa Matini</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="alternate" hreflang="en" href="https://musa.matini.link/en.html" />
+    <link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr.html" />
+    <link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar.html" />
+    <link rel="alternate" hreflang="x-default" href="https://musa.matini.link/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/static/scripts.js" defer></script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="description" content="I'm Musa Matini, a passionate software developer and high school student from Damascus. Check out my projects, certificates, and thoughts on technology.">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <a id="popup-image-link" href="" target="_blank">
+                <img id="popup-image" src="" alt="Project Image" class="popup-image">
+            </a>
+            <h2 id="popup-name" class="popup-name"></h2>
+            <p id="popup-description" class="popup-description"></p>
+            <div class="navigation">
+                <button id="prevImage" class="nav-button">&lt;</button>
+                <button id="nextImage" class="nav-button">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="background"></div>
+    
+    <div class="headerProjects">
+        <header>
+            <div class="sectionLeft">
+                <img id="pfp" src="/static/images/me4.jpeg" alt="A photo of musa matini. (me)" class="pfp">
+                <section id="contact" class="section-contact">
+                    <div class="contact-buttons">
+                        <a href="mailto:musamat00@gmail.com" class="contact-btn social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/musamatini" target="_blank" class="contact-btn social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/MusaAhmadMatini" target="_blank" class="contact-btn social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/musa_matini/" target="_blank" class="contact-btn social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discordapp.com/users/748620553530769440" target="_blank" class="contact-btn social-icon"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/musamatini" target="_blank" class="contact-btn social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </section>
+            </div>
+            <div class="sectionRight">
+                <h1 class="one">Musa Matini</h1>
+                <div class="langSelector">
+                    <a href="/en.html" class="selectedLang">EN</a>
+                    <a href="/tr.html" class="lang">TR</a>
+                    <a href="/ar.html" class="lang">AR</a>
+                </div>
+                <div class="about">{{ABOUT_TEXT}}</div>
+            </div>
+        </header>
+        <div class="section-divider"></div>
+        <h1 class="title">My Projects & Certificates</h1>
+        <div class="projects">
+            {{PROJECTS_HTML}}
+        </div>
+        <div class="section-divider"></div>
+        {{NEWSLETTER_SECTION_HTML}}
+
+    </div>
+</body>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Musa Matini",
+  "url": "https://musa.matini.link",
+  "image": "https://musa.matini.link/static/images/me4.jpeg",
+  "sameAs": [
+    "https://github.com/musamatini",
+    "https://twitter.com/MusaAhmadMatini",
+    "https://www.instagram.com/musa_matini/",
+    "https://www.linkedin.com/in/musamatini"
+  ],
+  "jobTitle": "Software Developer",
+  "knowsLanguage": ["en-US", "tr-TR", "ar-SA"],
+  "nationality": "Syrian",
+  "description": "I’m a 2008-born high school student living in Damascus, passionate about software."
+}
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Am Musa Matini</title>
+</head>
+<body style="background-color: black;">
+    <script>
+          const lang = navigator.language || navigator.userLanguage;
+          if (lang.startsWith('tr')) {
+            window.location.href = "/tr.html";
+          } else if (lang.startsWith('ar')) { 
+            window.location.href = "/ar.html";
+          } else {
+            window.location.href = "/en.html";
+          }
+    </script>
+</body>
+</html>

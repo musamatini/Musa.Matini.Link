@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="{{ lang_code }}" {% if dir == 'rtl' %}dir="rtl"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="alternate" hreflang="en" href="https://musa.matini.link/en" />
+    <link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr" />
+    <link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar" />
+    <link rel="alternate" hreflang="x-default" href="https://musa.matini.link/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% if lang_code == 'ar' %}
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    {% endif %}
+    <script src="/static/scripts.js" defer></script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body {% if lang_code == 'ar' %}class="rtl-body"{% endif %}>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <a id="popup-image-link" href="" target="_blank">
+                <img id="popup-image" src="" alt="Project Image" class="popup-image">
+            </a>
+            <h2 id="popup-name" class="popup-name"></h2>
+            <p id="popup-description" class="popup-description"></p>
+            <div class="navigation">
+                <button id="prevImage" class="nav-button">&lt;</button>
+                <button id="nextImage" class="nav-button">&gt;</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="background"></div>
+    
+    <div class="headerProjects">
+        <header>
+            <div class="sectionLeft">
+                <img id="pfp" src="/static/images/me4.jpeg" alt="A photo of musa matini. (me)" class="pfp">
+                <section id="contact" class="section-contact">
+                    <div class="contact-buttons">
+                        <a href="mailto:musamat00@gmail.com" class="contact-btn social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/musamatini" target="_blank" class="contact-btn social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/MusaAhmadMatini" target="_blank" class="contact-btn social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/musa_matini/" target="_blank" class="contact-btn social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discordapp.com/users/748620553530769440" target="_blank" class="contact-btn social-icon"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/musamatini" target="_blank" class="contact-btn social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </section>
+            </div>
+            <div class="sectionRight">
+                <h1 class="one">{{ name }}</h1>
+                <div class="langSelector">
+                    <a href="/en" class="{% if lang_code == 'en' %}selectedLang{% else %}lang{% endif %}">EN</a>
+                    <a href="/tr" class="{% if lang_code == 'tr' %}selectedLang{% else %}lang{% endif %}">TR</a>
+                    <a href="/ar" class="{% if lang_code == 'ar' %}selectedLang{% else %}lang{% endif %}">AR</a>
+                </div>
+                <div class="about">{{ about_me }}</div>
+            </div>
+        </header>
+
+        <h1 class="title">{{ newsletter_title }}</h1>
+        <section class="newsletter-section">
+            <div class="newsletter-list">
+                <ul>
+                    {% for newsletter in newsletters %}
+                    <li data-target="newsletter-{{ newsletter.id }}">{{ newsletter.translations[lang_code].title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="newsletter-content">
+                {% for newsletter in newsletters %}
+                <div id="newsletter-{{ newsletter.id }}" class="newsletter-pane" style="display: none;">
+                    {{ newsletter.content[lang_code] | safe }}
+                </div>
+                {% endfor %}
+                <div id="newsletter-placeholder" class="newsletter-pane">
+                    <p>{{ newsletter_placeholder }}</p>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="title">{{ projects_title }}</h1>
+        <div class="projects">
+            {% for project in projects %}
+            <div class="project {% if loop.index > 4 %}project-hidden{% endif %}" data-name="{{ project.translations[lang_code].name }}" data-description="{{ project.translations[lang_code].description }}" data-images='{{ project.images | tojson }}' {% if project.external_link_image %}data-external-link-image="{{ project.external_link_image }}"{% endif %}>
+                <div class="project-inner">
+                    <img src="{{ project.thumbnail }}" alt="Image of project {{ project.translations[lang_code].name }}" class="project-img" draggable="false">
+                    <h2 class="project-name">{{ project.translations[lang_code].name }}</h2>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        {% if projects | length > 4 %}
+        <button id="view-all-projects-btn" class="view-all-btn">{{ view_all_button }}</button>
+        {% endif %}
+    </div>
+</body>
+</html>
