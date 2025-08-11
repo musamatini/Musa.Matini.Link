@@ -2,28 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <url>
-        <loc>https://musa.matini.link/en.html</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr.html" />
-        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://musa.matini.link/en.html" />
-    </url>
+  <url>
+    <loc>https://musamatini.link/</loc>
+    <lastmod>2025-08-11</lastmod> 
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://musamatini.link/en.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://musamatini.link/tr.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musamatini.link/ar.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musamatini.link/en.html" />
+  </url>
 
-    <url>
-        <loc>https://musa.matini.link/tr.html</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr.html" />
-        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://musa.matini.link/en.html" />
-    </url>
+  <url>
+    <loc>https://musamatini.link/en.html</loc>
+    <lastmod>2025-08-11</lastmod> 
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://musamatini.link/en.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://musamatini.link/tr.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musamatini.link/ar.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musamatini.link/en.html" />
+  </url>
 
-    <url>
-        <loc>https://musa.matini.link/ar.html</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://musa.matini.link/en.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://musa.matini.link/tr.html" />
-        <xhtml:link rel="alternate" hreflang="ar" href="https://musa.matini.link/ar.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://musa.matini.link/en.html" />
-    </url>
+  <url>
+    <loc>https://musamatini.link/tr.html</loc>
+    <lastmod>2025-08-11</lastmod> 
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://musamatini.link/en.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://musamatini.link/tr.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musamatini.link/ar.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musamatini.link/en.html" />
+  </url>
+
+  <url>
+    <loc>https://musamatini.link/ar.html</loc>
+    <lastmod>2025-08-11</lastmod> 
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://musamatini.link/en.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://musamatini.link/tr.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musamatini.link/ar.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musamatini.link/en.html" />
+  </url>
 
 </urlset>
