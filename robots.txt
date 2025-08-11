@@ -1,0 +1,6 @@
+# Allow all crawlers full access
+User-agent: *
+Disallow:
+
+# Provide the correct sitemap location
+Sitemap: https://musamatini.link/sitemap.xml
