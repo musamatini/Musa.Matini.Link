@@ -3,92 +3,209 @@
         "id": "homiesTracker",
         "category": "project",
         "thumb": "/static/images/projectImages/homiesTracker/thumb.jpeg",
-        "images": ["/static/images/projectImages/homiesTracker/1.jpeg"],
-        "en": { "name": "Homies Tracker", "description": "This is an app that I made using kotlin in Android studio. This is app tracks me and my 2 friends so every one of us can know how far the other 2 members are from school. Their personal info is blurred. The app were tested and it worked." },
-        "tr": { "name": "Arkadaş Takip Uygulaması", "description": "Bu, Kotlin kullanarak Android Studio'da tasarladığım bir uygulama. Arkadaşlarım ve benim okula olan mesafeyi bilmemizi sağlıyor. Kişisel bilgiler gizlenmiştir. Uygulama test edildi ve düzgün çalışıyor." },
-        "ar": { "name": "متتبع الأصدقاء", "description": "هذا تطبيق قمت بإنشائه باستخدام Kotlin في Android Studio. يتتبع هذا التطبيق المسافة بيني وبين أصدقائي بحيث يمكن لكل منا معرفة المسافة بينه وبين الآخرين. تم اختبار التطبيق وكان يعمل بشكل جيد." }
+        "images": [
+            "/static/images/projectImages/homiesTracker/1.jpeg"
+        ],
+        "en": {
+            "name": "Homies Tracker",
+            "description": "This is an app that I made using kotlin in Android studio. This is app tracks me and my 2 friends so every one of us can know how far the other 2 members are from school. Their personal info is blurred. The app were tested and it worked."
+        },
+        "tr": {
+            "name": "Arkadaş Takip Uygulaması",
+            "description": "Bu, Kotlin kullanarak Android Studio'da tasarladığım bir uygulama. Arkadaşlarım ve benim okula olan mesafeyi bilmemizi sağlıyor. Kişisel bilgiler gizlenmiştir. Uygulama test edildi ve düzgün çalışıyor."
+        },
+        "ar": {
+            "name": "متتبع الأصدقاء",
+            "description": "هذا تطبيق قمت بإنشائه باستخدام Kotlin في Android Studio. يتتبع هذا التطبيق المسافة بيني وبين أصدقائي بحيث يمكن لكل منا معرفة المسافة بينه وبين الآخرين. تم اختبار التطبيق وكان يعمل بشكل جيد."
+        }
     },
     {
         "id": "oldWebsite",
         "category": "project",
         "thumb": "/static/images/projectImages/oldWebsite/thumb.jpeg",
-        "images": ["/static/images/projectImages/oldWebsite/1.jpeg"],
-        "en": { "name": "My Old Website", "description": "My previous personal website which lacked responsiveness, led me to create this new one." },
-        "tr": { "name": "Eski Websitem", "description": "Daha önceki kişisel sitem, yanıt verme özelliği eksikti ve bu, yeni siteyi tasarlamamın sebebi oldu." },
-        "ar": { "name": "موقعي القديم", "description": "موقعي الشخصي القديم الذي كان يفتقر إلى الاستجابة، مما دفعني لإنشاء هذا الموقع الجديد." }
+        "images": [
+            "/static/images/projectImages/oldWebsite/1.jpeg"
+        ],
+        "en": {
+            "name": "My Old Website",
+            "description": "My previous personal website which lacked responsiveness, led me to create this new one."
+        },
+        "tr": {
+            "name": "Eski Websitem",
+            "description": "Daha önceki kişisel sitem, yanıt verme özelliği eksikti ve bu, yeni siteyi tasarlamamın sebebi oldu."
+        },
+        "ar": {
+            "name": "موقعي القديم",
+            "description": "موقعي الشخصي القديم الذي كان يفتقر إلى الاستجابة، مما دفعني لإنشاء هذا الموقع الجديد."
+        }
     },
     {
         "id": "rideScheduling",
         "category": "project",
         "thumb": "/static/images/projectImages/rideScheduling/thumb.jpeg",
-        "images": ["/static/images/projectImages/rideScheduling/1.jpeg", "/static/images/projectImages/rideScheduling/2.jpeg"],
-        "en": { "name": "Ride Scheduling Website", "description": "This is a taxi requisition website and its pc python app. The website uses flask for backend. The app is built using python and python’s tkinter library." },
-        "tr": { "name": "Yolculuk Planlama Sitesi", "description": "Bu, taksi çağırmak için bir web sitesi ve masaüstü uygulamasıdır. Web sitesi Flask ile çalışıyor, masaüstü uygulaması ise Python ve tkinter kütüphanesi kullanılarak tasarlandı." },
-        "ar": { "name": "موقع جدولة الرحلات", "description": "هذا موقع لحجز التاكسي وتطبيقه على الكمبيوتر. الموقع يستخدم Flask كخلفية. التطبيق مبني باستخدام Python ومكتبة Tkinter." }
+        "images": [
+            "/static/images/projectImages/rideScheduling/2.jpeg",
+            "/static/images/projectImages/rideScheduling/1.jpeg"
+        ],
+        "en": {
+            "name": "Ride Scheduling Website",
+            "description": "This is a taxi requisition website and its pc python app. The website uses flask for backend. The app is built using python and python’s tkinter library."
+        },
+        "tr": {
+            "name": "Yolculuk Planlama Sitesi",
+            "description": "Bu, taksi çağırmak için bir web sitesi ve masaüstü uygulamasıdır. Web sitesi Flask ile çalışıyor, masaüstü uygulaması ise Python ve tkinter kütüphanesi kullanılarak tasarlandı."
+        },
+        "ar": {
+            "name": "موقع جدولة الرحلات",
+            "description": "هذا موقع لحجز التاكسي وتطبيقه على الكمبيوتر. الموقع يستخدم Flask كخلفية. التطبيق مبني باستخدام Python ومكتبة Tkinter."
+        }
     },
     {
         "id": "simpleSocial",
         "category": "project",
         "thumb": "/static/images/projectImages/simpleSocialPlatform/thumb.jpeg",
-        "images": ["/static/images/projectImages/simpleSocialPlatform/1.jpeg", "/static/images/projectImages/simpleSocialPlatform/2.jpeg", "/static/images/projectImages/simpleSocialPlatform/3.jpeg"],
-        "en": { "name": "Simple Social Platform", "description": "A social media website with limited features, signup login post. Its flask on the backend, it uses sqlite3 as a database." },
-        "tr": { "name": "Basit Sosyal Platform", "description": "Kullanıcı kayıt, giriş ve gönderi paylaşımı özelliklerine sahip basit bir sosyal medya sitesi. Flask ve SQLite3 veritabanı kullanılarak oluşturuldu." },
-        "ar": { "name": "منصة اجتماعية بسيطة", "description": "موقع للتواصل الاجتماعي بميزات محدودة مثل التسجيل وتسجيل الدخول والنشر. يستخدم Flask كخلفية و SQLite3 كقاعدة بيانات." }
+        "images": [
+            "/static/images/projectImages/simpleSocialPlatform/1.jpeg",
+            "/static/images/projectImages/simpleSocialPlatform/2.jpeg",
+            "/static/images/projectImages/simpleSocialPlatform/3.jpeg"
+        ],
+        "en": {
+            "name": "Simple Social Platform",
+            "description": "A social media website with limited features, signup login post. Its flask on the backend, it uses sqlite3 as a database."
+        },
+        "tr": {
+            "name": "Basit Sosyal Platform",
+            "description": "Kullanıcı kayıt, giriş ve gönderi paylaşımı özelliklerine sahip basit bir sosyal medya sitesi. Flask ve SQLite3 veritabanı kullanılarak oluşturuldu."
+        },
+        "ar": {
+            "name": "منصة اجتماعية بسيطة",
+            "description": "موقع للتواصل الاجتماعي بميزات محدودة مثل التسجيل وتسجيل الدخول والنشر. يستخدم Flask كخلفية و SQLite3 كقاعدة بيانات."
+        }
     },
     {
         "id": "commercialWebsite",
         "category": "project",
         "thumb": "/static/images/projectImages/commercialWebsite/thumb.jpeg",
-        "images": ["/static/images/projectImages/commercialWebsite/1.jpeg", "/static/images/projectImages/commercialWebsite/2.jpeg", "/static/images/projectImages/commercialWebsite/3.jpeg"],
-        "en": { "name": "Commercial Website", "description": "A commercial website to showcase products." },
-        "tr": { "name": "Ticari Site", "description": "Ürünleri güzel bir şekilde sergileyen bir web sitesi." },
-        "ar": { "name": "موقع تجاري", "description": "موقع تجاري لعرض المنتجات." }
+        "images": [
+            "/static/images/projectImages/commercialWebsite/1.jpeg",
+            "/static/images/projectImages/commercialWebsite/2.jpeg",
+            "/static/images/projectImages/commercialWebsite/3.jpeg"
+        ],
+        "en": {
+            "name": "Commercial Website",
+            "description": "A commercial website to showcase products."
+        },
+        "tr": {
+            "name": "Ticari Site",
+            "description": "Ürünleri güzel bir şekilde sergileyen bir web sitesi."
+        },
+        "ar": {
+            "name": "موقع تجاري",
+            "description": "موقع تجاري لعرض المنتجات."
+        }
     },
     {
         "id": "qrCreator",
         "category": "project",
         "thumb": "/static/images/projectImages/qrCreator/thumb.jpeg",
-        "images": ["/static/images/projectImages/qrCreator/1.jpeg"],
-        "en": { "name": "Qr Code Maker", "description": "A simple website that i made to convert urls qr codes quickly. runs off python in the backend." },
-        "tr": { "name": "QR Kod Üretici", "description": "Bağlantıları hızlı bir şekilde QR kodlarına dönüştüren basit bir site. Arkada Python çalışıyor." },
-        "ar": { "name": "منشئ QR", "description": "موقع لإنشاء أكواد QR لمواقع الويب. يتم إنشاء رموز QR في الوقت الفعلي باستخدام JavaScript." }
+        "images": [
+            "/static/images/projectImages/qrCreator/1.jpeg"
+        ],
+        "en": {
+            "name": "Qr Code Maker",
+            "description": "A simple website that i made to convert urls qr codes quickly. runs off python in the backend."
+        },
+        "tr": {
+            "name": "QR Kod Üretici",
+            "description": "Bağlantıları hızlı bir şekilde QR kodlarına dönüştüren basit bir site. Arkada Python çalışıyor."
+        },
+        "ar": {
+            "name": "منشئ QR",
+            "description": "موقع لإنشاء أكواد QR لمواقع الويب. يتم إنشاء رموز QR في الوقت الفعلي باستخدام JavaScript."
+        }
     },
     {
         "id": "liveChat",
         "category": "project",
         "thumb": "/static/images/projectImages/liveChat/thumb.jpeg",
-        "images": ["/static/images/projectImages/liveChat/1.jpeg", "/static/images/projectImages/liveChat/2.jpeg"],
-        "en": { "name": "Live Chatting Webiste", "description": "A live chatting website using python's flask as a backend, plain html, css as a front-end. Also this was my CS50x Final Project :)" },
-        "tr": { "name": "Canlı Sohbet Sitesi", "description": "Flask kullanılarak oluşturulan canlı sohbet sitesi. HTML ve CSS ile basit bir arayüze sahip. CS50x için son projemdi :)" },
-        "ar": { "name": "دردشة حية", "description": "موقع دردشة حية يستخدم WebSockets." }
+        "images": [
+            "/static/images/projectImages/liveChat/1.jpeg",
+            "/static/images/projectImages/liveChat/2.jpeg"
+        ],
+        "en": {
+            "name": "Live Chatting Webiste",
+            "description": "A live chatting website using python's flask as a backend, plain html, css as a front-end. Also this was my CS50x Final Project :)"
+        },
+        "tr": {
+            "name": "Canlı Sohbet Sitesi",
+            "description": "Flask kullanılarak oluşturulan canlı sohbet sitesi. HTML ve CSS ile basit bir arayüze sahip. CS50x için son projemdi :)"
+        },
+        "ar": {
+            "name": "دردشة حية",
+            "description": "موقع دردشة حية يستخدم WebSockets."
+        }
     },
     {
         "id": "taskManager",
         "category": "project",
         "thumb": "/static/images/projectImages/taskManager/thumb.jpeg",
-        "images": ["/static/images/projectImages/taskManager/1.jpeg", "/static/images/projectImages/taskManager/2.jpeg"],
-        "en": { "name": "Task Manager", "description": "A python based cli app that helps users manager their tasks. Built using sqlite3 as a database." },
-        "tr": { "name": "Görev Yöneticisi", "description": "SQLite3 veritabanı kullanılarak oluşturulmuş bir CLI görev yönetim uygulaması." },
-        "ar": { "name": "مدير مهام", "description": "برنامج مبني باستخدام لغة بايثون لمساعدة المستخدم في تنظيم مهامه. استخدمت SQLite3 كقاعدة بيانات." }
+        "images": [
+            "/static/images/projectImages/taskManager/1.jpeg",
+            "/static/images/projectImages/taskManager/2.jpeg"
+        ],
+        "en": {
+            "name": "Task Manager",
+            "description": "A python based cli app that helps users manager their tasks. Built using sqlite3 as a database."
+        },
+        "tr": {
+            "name": "Görev Yöneticisi",
+            "description": "SQLite3 veritabanı kullanılarak oluşturulmuş bir CLI görev yönetim uygulaması."
+        },
+        "ar": {
+            "name": "مدير مهام",
+            "description": "برنامج مبني باستخدام لغة بايثون لمساعدة المستخدم في تنظيم مهامه. استخدمت SQLite3 كقاعدة بيانات."
+        }
     },
     {
         "id": "cs50",
         "category": "certificate",
         "thumb": "/static/images/projectImages/CS50x/CS50x.jpeg",
-        "images": ["/static/images/projectImages/CS50x/CS50x.jpeg"],
+        "images": [
+            "/static/images/projectImages/CS50x/CS50x.jpeg"
+        ],
         "external_link_image": "https://certificates.cs50.io/26595515-91d1-4fd9-a13a-45f0c7d2d4e3.pdf?size=letter",
-        "en": { "name": "CS50 Certificate", "description": "This is my certificate for completing CS50: Introduction to Computer Science from Harvard University." },
-        "tr": { "name": "CS50 Sertifikası", "description": "Bu CS50: Introduction to Computer Science kusrunu bitirmeme dair Harvard üniversitesinden bir sertifikadır." },
-        "ar": { "name": "CS50 شهادة", "description": "هذه شهادتي لإكمال كورس CS50: Introduction to Computer Science from Harvard University." }
+        "en": {
+            "name": "CS50 Certificate",
+            "description": "This is my certificate for completing CS50: Introduction to Computer Science from Harvard University."
+        },
+        "tr": {
+            "name": "CS50 Sertifikası",
+            "description": "Bu CS50: Introduction to Computer Science kusrunu bitirmeme dair Harvard üniversitesinden bir sertifikadır."
+        },
+        "ar": {
+            "name": "CS50 شهادة",
+            "description": "هذه شهادتي لإكمال كورس CS50: Introduction to Computer Science from Harvard University."
+        }
     },
     {
         "id": "cs50p",
         "category": "certificate",
         "thumb": "/static/images/projectImages/CS50P/CS50P.jpeg",
-        "images": ["/static/images/projectImages/CS50P/CS50P.jpeg"],
+        "images": [
+            "/static/images/projectImages/CS50P/CS50P.jpeg"
+        ],
         "external_link_image": "https://certificates.cs50.io/c720335e-ca7b-464b-ba52-27270462a836.pdf?size=letter",
-        "en": { "name": "CS50P Certificate", "description": "This is my certificate for completing CS50P: Introduction to Programing With Python from Harvard University." },
-        "tr": { "name": "CS50P Sertifikası", "description": "Bu CS50P: Introduction to Programing With Python kusrunu bitirmeme dair Harvard üniversitesinden bir sertifikadır" },
-        "ar": { "name": "CS50P شهادة", "description": "هذه شهادتي لإكمال كورس CS50P: Introduction to Programing With Python from Harvard University." }
+        "en": {
+            "name": "CS50P Certificate",
+            "description": "This is my certificate for completing CS50P: Introduction to Programing With Python from Harvard University."
+        },
+        "tr": {
+            "name": "CS50P Sertifikası",
+            "description": "Bu CS50P: Introduction to Programing With Python kusrunu bitirmeme dair Harvard üniversitesinden bir sertifikadır"
+        },
+        "ar": {
+            "name": "CS50P شهادة",
+            "description": "هذه شهادتي لإكمال كورس CS50P: Introduction to Programing With Python from Harvard University."
+        }
     }
 ]
