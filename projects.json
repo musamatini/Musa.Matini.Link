@@ -44,8 +44,8 @@
         "category": "project",
         "thumb": "/static/images/projectImages/rideScheduling/thumb.jpeg",
         "images": [
-            "/static/images/projectImages/rideScheduling/2.jpeg",
-            "/static/images/projectImages/rideScheduling/1.jpeg"
+            "/static/images/projectImages/rideScheduling/1.jpeg",
+            "/static/images/projectImages/rideScheduling/2.jpeg"
         ],
         "en": {
             "name": "Ride Scheduling Website",
