@@ -106,26 +106,6 @@
         }
     },
     {
-        "id": "qrCreator",
-        "category": "project",
-        "thumb": "/static/images/projectImages/qrCreator/thumb.jpeg",
-        "images": [
-            "/static/images/projectImages/qrCreator/1.jpeg"
-        ],
-        "en": {
-            "name": "Qr Code Maker",
-            "description": "A simple website that i made to convert urls qr codes quickly. runs off python in the backend."
-        },
-        "tr": {
-            "name": "QR Kod Üretici",
-            "description": "Bağlantıları hızlı bir şekilde QR kodlarına dönüştüren basit bir site. Arkada Python çalışıyor."
-        },
-        "ar": {
-            "name": "منشئ QR",
-            "description": "موقع لإنشاء أكواد QR لمواقع الويب. يتم إنشاء رموز QR في الوقت الفعلي باستخدام JavaScript."
-        }
-    },
-    {
         "id": "liveChat",
         "category": "project",
         "thumb": "/static/images/projectImages/liveChat/thumb.jpeg",
