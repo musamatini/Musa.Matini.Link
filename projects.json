@@ -1,5 +1,30 @@
 [
     {
+        "id": "the-warpkey-app",
+        "category": "project",
+        "thumb": "/static/images/projectImages/the-warpkey-app/thumb.jpeg",
+        "images": [
+            "/static/images/projectImages/the-warpkey-app/1.jpeg",
+            "/static/images/projectImages/the-warpkey-app/2.jpeg",
+            "/static/images/projectImages/the-warpkey-app/3.jpeg",
+            "/static/images/projectImages/the-warpkey-app/4.jpeg",
+            "/static/images/projectImages/the-warpkey-app/5.jpeg"
+        ],
+        "external_link_image": "https://github.com/musamatini/WrapKey",
+        "en": {
+            "name": "The WarpKey App",
+            "description": "WrapKey is a lightweight yet powerful macOS utility. Create simple, memorable, or complex keyboard shortcuts to launch, switch, or run anything on your Mac. It's designed to be blazing-fast and intuitive."
+        },
+        "tr": {
+            "name": "WarpKey MacOS Uygulaması",
+            "description": "WarpKey, hafif ancak güçlü bir macOS yardımcı programıdır. Mac'inizde herhangi bir şeyi başlatmak, geçiş yapmak veya çalıştırmak için basit, akılda kalıcı ya da karmaşık klavye kısayolları oluşturun. Şimşek hızında ve sezgisel olacak şekilde tasarlanmıştır."
+        },
+        "ar": {
+            "name": "تطبيق WarpKey لنظام MacOS",
+            "description": "WarpKey هو أداة مساعدة لنظام macOS، خفيفة الوزن لكنها قوية. يتيح لك إنشاء اختصارات لوحة مفاتيح بسيطة أو سهلة التذكر أو معقدة، لإطلاق أي شيء على جهاز الماك الخاص بك أو التبديل بين التطبيقات أو تشغيلها. صُمم ليكون فائق السرعة وسهل الاستخدام."
+        }
+    },
+    {
         "id": "homiesTracker",
         "category": "project",
         "thumb": "/static/images/projectImages/homiesTracker/thumb.jpeg",
@@ -17,26 +42,6 @@
         "ar": {
             "name": "متتبع الأصدقاء",
             "description": "هذا تطبيق قمت بإنشائه باستخدام Kotlin في Android Studio. يتتبع هذا التطبيق المسافة بيني وبين أصدقائي بحيث يمكن لكل منا معرفة المسافة بينه وبين الآخرين. تم اختبار التطبيق وكان يعمل بشكل جيد."
-        }
-    },
-    {
-        "id": "oldWebsite",
-        "category": "project",
-        "thumb": "/static/images/projectImages/oldWebsite/thumb.jpeg",
-        "images": [
-            "/static/images/projectImages/oldWebsite/1.jpeg"
-        ],
-        "en": {
-            "name": "My Old Website",
-            "description": "My previous personal website which lacked responsiveness, led me to create this new one."
-        },
-        "tr": {
-            "name": "Eski Websitem",
-            "description": "Daha önceki kişisel sitem, yanıt verme özelliği eksikti ve bu, yeni siteyi tasarlamamın sebebi oldu."
-        },
-        "ar": {
-            "name": "موقعي القديم",
-            "description": "موقعي الشخصي القديم الذي كان يفتقر إلى الاستجابة، مما دفعني لإنشاء هذا الموقع الجديد."
         }
     },
     {
@@ -127,6 +132,26 @@
         }
     },
     {
+        "id": "oldWebsite",
+        "category": "project",
+        "thumb": "/static/images/projectImages/oldWebsite/thumb.jpeg",
+        "images": [
+            "/static/images/projectImages/oldWebsite/1.jpeg"
+        ],
+        "en": {
+            "name": "My Old Website",
+            "description": "My previous personal website which lacked responsiveness, led me to create this new one."
+        },
+        "tr": {
+            "name": "Eski Websitem",
+            "description": "Daha önceki kişisel sitem, yanıt verme özelliği eksikti ve bu, yeni siteyi tasarlamamın sebebi oldu."
+        },
+        "ar": {
+            "name": "موقعي القديم",
+            "description": "موقعي الشخصي القديم الذي كان يفتقر إلى الاستجابة، مما دفعني لإنشاء هذا الموقع الجديد."
+        }
+    },
+    {
         "id": "cs50",
         "category": "certificate",
         "thumb": "/static/images/projectImages/CS50x/CS50x.jpeg",
@@ -166,31 +191,6 @@
         "ar": {
             "name": "CS50P شهادة",
             "description": "هذه شهادتي لإكمال كورس CS50P: Introduction to Programing With Python from Harvard University."
-        }
-    },
-    {
-        "id": "the-warpkey-app",
-        "category": "project",
-        "thumb": "/static/images/projectImages/the-warpkey-app/thumb.jpeg",
-        "images": [
-            "/static/images/projectImages/the-warpkey-app/1.jpeg",
-            "/static/images/projectImages/the-warpkey-app/2.jpeg",
-            "/static/images/projectImages/the-warpkey-app/3.jpeg",
-            "/static/images/projectImages/the-warpkey-app/4.jpeg",
-            "/static/images/projectImages/the-warpkey-app/5.jpeg"
-        ],
-        "external_link_image": "https://github.com/musamatini/WrapKey",
-        "en": {
-            "name": "The WarpKey App",
-            "description": "WrapKey is a lightweight yet powerful macOS utility. Create simple, memorable, or complex keyboard shortcuts to launch, switch, or run anything on your Mac. It's designed to be blazing-fast and intuitive."
-        },
-        "tr": {
-            "name": "WarpKey MacOS Uygulaması",
-            "description": "WarpKey, hafif ancak güçlü bir macOS yardımcı programıdır. Mac'inizde herhangi bir şeyi başlatmak, geçiş yapmak veya çalıştırmak için basit, akılda kalıcı ya da karmaşık klavye kısayolları oluşturun. Şimşek hızında ve sezgisel olacak şekilde tasarlanmıştır."
-        },
-        "ar": {
-            "name": "تطبيق WarpKey لنظام MacOS",
-            "description": "WarpKey هو أداة مساعدة لنظام macOS، خفيفة الوزن لكنها قوية. يتيح لك إنشاء اختصارات لوحة مفاتيح بسيطة أو سهلة التذكر أو معقدة، لإطلاق أي شيء على جهاز الماك الخاص بك أو التبديل بين التطبيقات أو تشغيلها. صُمم ليكون فائق السرعة وسهل الاستخدام."
         }
     }
 ]
