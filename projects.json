@@ -147,27 +147,6 @@
         }
     },
     {
-        "id": "taskManager",
-        "category": "project",
-        "thumb": "/static/images/projectImages/taskManager/thumb.jpeg",
-        "images": [
-            "/static/images/projectImages/taskManager/1.jpeg",
-            "/static/images/projectImages/taskManager/2.jpeg"
-        ],
-        "en": {
-            "name": "Task Manager",
-            "description": "A python based cli app that helps users manager their tasks. Built using sqlite3 as a database."
-        },
-        "tr": {
-            "name": "Görev Yöneticisi",
-            "description": "SQLite3 veritabanı kullanılarak oluşturulmuş bir CLI görev yönetim uygulaması."
-        },
-        "ar": {
-            "name": "مدير مهام",
-            "description": "برنامج مبني باستخدام لغة بايثون لمساعدة المستخدم في تنظيم مهامه. استخدمت SQLite3 كقاعدة بيانات."
-        }
-    },
-    {
         "id": "cs50",
         "category": "certificate",
         "thumb": "/static/images/projectImages/CS50x/CS50x.jpeg",
