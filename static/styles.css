@@ -70,7 +70,7 @@ header { display: flex; flex-direction:row; height: 100%; max-width: 80%; margin
     transition: all 0.3s ease;
 }
 .nav-button:hover {
-    background-color: #d44040;
+    background-color: #fee8e8;
     border-color: #d44040;
 }
 .hide-navigation { display: none; }
@@ -80,7 +80,7 @@ header { display: flex; flex-direction:row; height: 100%; max-width: 80%; margin
 .selectedLang, .selectedLang:visited { color: #d44040; }
 .title { margin-top: 0; margin-bottom: 40px; }
 .hidden-project { display: none; }
-.view-all-container { width: 100%; text-align: center; grid-column: 1 / -1; margin-top: 40px; }
+.view-all-container { width: 100%; text-align: center; grid-column: 1 / -1; }
 .view-all-btn { background-color: rgba(255, 255, 255, 0.1); border: 2px solid white; color: white; padding: 15px 30px; font-family: 'Tektur', sans-serif; font-size: 16px; cursor: pointer; transition: all 0.3s ease; }
 .view-all-btn:hover { background-color: #d44040; border-color: #d44040; color: white; }
 
