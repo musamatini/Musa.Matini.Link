@@ -162,8 +162,12 @@ def build():
         with open(os.path.join(DIST_DIR, f'{lang}.html'), 'w', encoding='utf-8') as f:
             f.write(template)
 
+    # --- Copying root files to the final directory ---
     shutil.copy('templates/index.html', os.path.join(DIST_DIR, 'index.html'))
     shutil.copy('favicon.png', os.path.join(DIST_DIR, 'favicon.png'))
+    # --- THIS IS THE LINE I ADDED ---
+    shutil.copy('googleec5f59a1e99626bf.html', os.path.join(DIST_DIR, 'googleec5f59a1e99626bf.html'))
+    
     print("Website built successfully in 'dist' directory!")
 
 if __name__ == '__main__':
