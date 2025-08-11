@@ -58,7 +58,8 @@
         "ar": {
             "name": "موقع جدولة الرحلات",
             "description": "هذا موقع لحجز التاكسي وتطبيقه على الكمبيوتر. الموقع يستخدم Flask كخلفية. التطبيق مبني باستخدام Python ومكتبة Tkinter."
-        }
+        },
+        "external_link_image": ""
     },
     {
         "id": "simpleSocial",
