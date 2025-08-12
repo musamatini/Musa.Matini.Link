@@ -88,6 +88,8 @@ def generate_newsletter_html(newsletters, texts):
 
     newsletter_data_json = json.dumps(newsletters)
 
+    # Note the <form> action points to Formspree now.
+    # Replace YOUR_UNIQUE_ID with your actual Formspree endpoint ID.
     return f"""
     <h1 class="title">{texts['title']}</h1>
     <div class="newsletter-container">
@@ -95,11 +97,10 @@ def generate_newsletter_html(newsletters, texts):
             <ul>{list_items}</ul>
             <div class="subscribe-box">
                 <h4>{texts['subscribe_title']}</h4>
-                <form id="subscribe-form">
-                    <input type="text" id="subscribe-name" name="name" placeholder="{texts['subscribe_name_placeholder']}" required>
-                    <input type="email" id="subscribe-email" name="email" placeholder="{texts['subscribe_email_placeholder']}" required>
-                    <button type="submit" id="subscribe-button">{texts['subscribe_button']}</button>
-                    <div id="subscribe-status" class="subscribe-status"></div>
+                <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                    <input type="text" name="name" placeholder="{texts['subscribe_name_placeholder']}" required>
+                    <input type="email" name="email" placeholder="{texts['subscribe_email_placeholder']}" required>
+                    <button type="submit">{texts['subscribe_button']}</button>
                 </form>
             </div>
         </div>
