@@ -82,10 +82,6 @@ body {
     margin-bottom: 50px; /* Slight lift */
 }
 
-.markdown-body {
-    font-size: clamp(18px, 1.4vw, 22px);
-}
-
 .global-sidebar.left {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
