@@ -247,22 +247,35 @@ document.addEventListener('DOMContentLoaded', () => {
         lens.style.display = 'none';
         resetZoom();
 
+        // 1. FIX: Force mouse to be VISIBLE while loading
+        if (zoomContainer) zoomContainer.style.cursor = 'default';
+
         if (isPdf) {
             modalPdf.src = fileUrl;
-            modalPdf.onload = () => {
+            // Helper to show PDF
+            const showPdf = () => {
                 modalLoader.style.display = 'none';
                 modalPdf.style.display = 'block';
+                // PDFs don't zoom, so keep cursor visible
+                if (zoomContainer) zoomContainer.style.cursor = 'default';
             };
-            setTimeout(() => {
-                modalLoader.style.display = 'none';
-                modalPdf.style.display = 'block';
-            }, 1000);
+
+            modalPdf.onload = showPdf;
+            // Fallback if onload doesn't fire for PDF
+            setTimeout(showPdf, 1000);
+
         } else {
             modalImage.src = ""; 
             modalImage.src = fileUrl;
+            
             modalImage.onload = () => {
                 modalLoader.style.display = 'none';
                 modalImage.style.display = 'block';
+                
+                // 2. FIX: Only hide mouse IF we are on desktop (to allow Zooming)
+                if (zoomContainer && !window.matchMedia("(pointer: coarse)").matches) {
+                    zoomContainer.style.cursor = 'none';
+                }
             };
         }
 
