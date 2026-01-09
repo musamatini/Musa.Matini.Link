@@ -506,6 +506,12 @@ main>section {
 .markdown-body code { background: var(--color-grey-dark); padding: 2px 5px; border: 1px solid #333; font-size: 0.9em; }
 .markdown-body a { color: var(--color-white); text-decoration: underline; text-underline-offset: 3px; }
 
+#about-section .markdown-body p,
+#about-section .markdown-body li {
+    font-size: clamp(19px, 1.6vw, 24px); 
+    line-height: 1.8;
+}
+
 .grid-container {
     display: flex;
     flex-wrap: wrap;
