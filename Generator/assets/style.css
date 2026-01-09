@@ -508,8 +508,9 @@ main>section {
 
 #about-section .markdown-body p,
 #about-section .markdown-body li {
-    font-size: clamp(19px, 1.6vw, 24px); 
-    line-height: 1.8;
+    /* Adjusted: Min 17px (Mobile) -> Max 20px (Desktop) */
+    font-size: clamp(17px, 1.35vw, 20px);
+    line-height: 1.75;
 }
 
 .grid-container {
