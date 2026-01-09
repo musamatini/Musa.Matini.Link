@@ -18,6 +18,7 @@ html,
 /* Removes jagged stroke and replaces it with smooth shadow */
 .hero-name,
 .hero-subtitle,
+.card-title,
 .global-sidebar {
     -webkit-text-stroke: 0 !important;
     text-shadow: 
