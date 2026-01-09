@@ -1,0 +1,241 @@
+body,
+html,
+.hero-name,
+.global-sidebar,
+.markdown-body,
+.nav-item,
+.markdown-body,
+.hero-subtitle,
+.sb-text,
+.markdown-body h1,
+.markdown-body h2,
+.footer-text {
+    font-family: 'Cairo', 'Courier Prime', sans-serif;
+    letter-spacing: normal !important;
+}
+
+/* --- ARABIC OUTLINE FIX --- */
+/* Removes jagged stroke and replaces it with smooth shadow */
+.hero-name,
+.hero-subtitle,
+.global-sidebar {
+    -webkit-text-stroke: 0 !important;
+    text-shadow: 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000, 
+       0 0 2px #000 !important;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+.name-first,
+.name-last {
+    letter-spacing: 0 !important;
+    margin-right: 0 !important;
+}
+
+.hero-name {
+    flex-direction: row !important;
+    gap: 15px;
+}
+
+/* Hero Layout Alignment for RTL */
+.hero-content {
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+/* Ensure both sides remain centered in Arabic */
+.hero-right {
+    align-items: flex-end;
+}
+
+.hero-left {
+    justify-content: flex-start;
+}
+
+/* 
+   FIX FOR DESKTOP SPACING IN ARABIC:
+   The user felt there was too much space between Hero and Section 2.
+   We reduce the bottom padding of the hero container specifically for desktop.
+*/
+#home-section {
+    padding-bottom: 0 !important; 
+    justify-content: flex-end; /* Push content slightly down/center */
+}
+
+/* Adjust margins for content inside hero */
+.hero-right {
+    margin-bottom: 50px; /* Slight lift */
+}
+
+.markdown-body {
+    font-size: clamp(18px, 1.4vw, 22px);
+}
+
+.global-sidebar.left {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.global-sidebar.right {
+    writing-mode: vertical-rl;
+    transform: rotate(0deg);
+}
+
+.global-sidebar {
+    text-orientation: mixed;
+    letter-spacing: 0;
+}
+
+.lang-opt+.lang-opt {
+    border-left: none;
+    border-right: 1px solid var(--color-white);
+}
+
+.pfp-shuffle-btn {
+    left: auto;
+    right: -15px;
+    transform: none;
+}
+
+.pfp-shuffle-btn i {
+    transform: none;
+}
+
+.pfp-shuffle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Modal RTL Fixes */
+.modal-close {
+    left: 20px;
+    right: auto;
+}
+
+.image-counter {
+    left: 20px !important;   /* Move to Left */
+    right: auto !important;  /* Unset Right */
+    
+    /* Force numbers to display as "1 / 5" not "5 / 1" */
+    direction: ltr !important; 
+}
+
+.gallery-nav-overlay {
+    flex-direction: row-reverse;
+}
+
+.card-title {
+    direction: rtl;
+}
+
+/* Modal Sidebar RTL Logic Flip */
+.modal-nav-sidebar.right .sb-text {
+    transform: rotate(-90deg);
+}
+
+.modal-nav-sidebar.right .sb-arrow {
+    transform: rotate(180deg);
+}
+
+.modal-nav-sidebar.left .sb-text {
+    transform: rotate(90deg);
+}
+
+.modal-nav-sidebar.left .sb-arrow {
+    transform: rotate(180deg);
+}
+
+.modal-nav-sidebar.left {
+    border-right: 2px solid var(--color-white);
+    border-left: none;
+}
+
+.modal-nav-sidebar.right {
+    border-left: 2px solid var(--color-white);
+    border-right: none;
+}
+
+.social-links {
+    margin: 15px 0 0 0;
+}
+
+/* --- RESET NAME FOR ARABIC (ONE LINE) --- */
+.name-first {
+    font-size: 1em !important;      /* Reset the big size */
+    padding-right: 0 !important;    /* Remove the padding used for stacking */
+    padding-left: 10px !important;  /* Add small space between First and Last name */
+    line-height: normal !important; /* Reset line height */
+}
+
+.name-last {
+    font-size: 1em !important;
+    letter-spacing: normal !important;
+}
+
+.hero-name {
+    align-items: center !important; /* Align vertically in the center */
+}
+
+@media (max-width: 900px) {
+    /* 1. FORCE COLUMN STACK & CENTER EVERYTHING */
+    #home-section .hero-content {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 25px;
+        width: 100%;
+    }
+    
+    /* 2. CENTER THE SECTION ITSELF */
+    #home-section {
+        justify-content: center !important;
+        align-items: center !important;
+        padding-bottom: 0 !important;
+        padding-top: 40px !important; /* Give it space from header */
+    }
+
+    /* 3. RESET LEFT/RIGHT CONTAINERS (The Fix) */
+    /* This stops them from floating to corners */
+    .hero-left, 
+    .hero-right {
+        width: 100% !important;
+        height: auto !important;
+        flex: 0 0 auto !important; /* Stop stretching */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important; 
+        align-items: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 4. ENSURE TEXT IS CENTERED */
+    .hero-text-wrapper {
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .hero-name {
+        justify-content: center !important;
+    }
+
+    /* 5. FIX PFP SIZE FOR TABLET */
+    .image-frame {
+        width: clamp(200px, 40vw, 350px);
+    }
+}

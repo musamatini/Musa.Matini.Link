@@ -1,0 +1,2 @@
+## Video Konferans Web Uygulaması
+Bu özel video konferans web uygulamasını, yazılım danışmanlık firması Etherlight için geliştirdim. Kararlılık için tasarlanan uygulama, değişken ağ koşullarında güvenilir bir performans sergilemek üzere optimize edilmiştir. Temel özellikleri arasında otomatik yeniden bağlanma, gürültü engelleme, ekran paylaşımı ve sanal toplantı odaları bulunmaktadır. Uygulama şu anda Etherlight'ın şirket içi operasyonlarını ve müşteri görüşmelerini yürütmek için kullanılmaktadır.

@@ -1,0 +1,44 @@
+{
+    "common": {
+        "email": "musamat00@gmail.com",
+        "pfp": "me.webp",
+        "socials": [
+            {"icon": "fab fa-github", "link": "https://github.com/musamatini"},
+            {"icon": "fab fa-linkedin", "link": "https://www.linkedin.com/in/musamatini"},
+            {"icon": "fab fa-twitter", "link": "https://twitter.com/MusaAhmadMatini"},
+            {"icon": "fab fa-instagram", "link": "https://www.instagram.com/musa_matini/"},
+            {"icon": "fab fa-discord", "link": "#"},
+            {"icon": "fas fa-envelope", "link": "mailto:musamat00@gmail.com"}
+        ]
+    },
+    "en": {
+        "page_title": "I am Musa Matini",
+        "name_first": "MUSA",
+        "name_last": "MATINI",
+        "subtitle": "A Software Developer who hasn't<br>sold his soul yet.",
+        "nav": { "home": "Home", "about": "About", "projects": "Projects", "certs": "Certifications", "end": "End" },
+        "sidebar": { "about_l": "ABOUT|ME", "about_r": "ABOUT|ME", "proj_l": "MY|PROJECTS", "proj_r": "MY|PROJECTS", "cert_l": "MY|DOCUMENTS", "cert_r": "MY|DOCUMENTS", "end_l": "THE", "end_r": "END" },
+        "footer": { "text": "Thank you for visiting my digital home.", "email_pre": "Email me at" },
+        "modal_btn": { "prev": "PREVIOUS", "next": "NEXT" }
+    },
+    "tr": {
+        "page_title": "Ben Musa Matini",
+        "name_first": "MUSA",
+        "name_last": "MATINI",
+        "subtitle": "Henüz ruhunu satmamış<br>bir Yazılım Geliştiricisi.",
+        "nav": { "home": "Ana Sayfa", "about": "Hakkımda", "projects": "Projeler", "certs": "Sertifikalar", "end": "Son" },
+        "sidebar": { "about_l": "HAKKIMDA", "about_r": "HAKKIMDA", "proj_l": "PROJELERIM", "proj_r": "PROJELERIM", "cert_l": "BELGELERİM", "cert_r": "BELGELERİM", "end_l": "VE", "end_r": "SON" },
+        "footer": { "text": "Dijital evimi ziyaret ettiğiniz için teşekkürler.", "email_pre": "Bana e-posta yaz:" },
+        "modal_btn": { "prev": "ÖNCEKİ", "next": "SONRAKİ" }
+    },
+    "ar": {
+        "page_title": "أنا موسى متيني",
+        "name_first": "موسى",
+        "name_last": "متيني",
+        "subtitle": "مطور برمجيات لم يبع روحه بعد.",
+        "nav": { "home": "الرئيسية", "about": "عني", "projects": "مشاريعي", "certs": "أوراقي", "end": "النهاية" },
+        "sidebar": { "about_l": "من أكون", "about_r": "من أكون", "proj_l": "مشاريعي", "proj_r": "مشاريعي", "cert_l": "أوراقي", "cert_r": "أوراقي", "end_l": "النهاية", "end_r": "النهاية" },
+        "footer": { "text": "شكراً لزيارتك منزلي الرقمي.", "email_pre": "راسلني على" },
+        "modal_btn": { "prev": "السابق", "next": "التالي" }
+    }
+}

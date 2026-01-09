@@ -1,0 +1,2 @@
+## Video Conferencing Web App
+I developed this custom video conferencing web application for the software consulting firm, Etherlight. Engineered for stability, the app is optimized to perform reliably across varying network conditions. Key features include automatic reconnection, noise cancellation, screen sharing, and virtual meeting rooms. It is currently used to facilitate Etherlight's internal operations and client consultations.

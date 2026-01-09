@@ -1,0 +1,2 @@
+## WarpKey MacOS Uygulaması
+WarpKey, hafif ancak güçlü bir macOS yardımcı programıdır. Mac'inizde herhangi bir şeyi başlatmak, geçiş yapmak veya çalıştırmak için basit, akılda kalıcı ya da karmaşık klavye kısayolları oluşturun. Şimşek hızında ve sezgisel olacak şekilde tasarlanmıştır.

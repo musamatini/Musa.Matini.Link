@@ -1,0 +1,2 @@
+## Arkadaş Takip Uygulaması
+Bu, Kotlin kullanarak Android Studio'da tasarladığım bir uygulama. Arkadaşlarım ve benim okula olan mesafeyi bilmemizi sağlıyor. Kişisel bilgiler gizlenmiştir. Uygulama test edildi ve düzgün çalışıyor.

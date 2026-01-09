@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" {% if lang == 'ar' %}dir="rtl"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+        
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    {% if lang == 'ar' %}<link rel="stylesheet" href="./rtl.css">{% endif %}
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="icon" type="image/png" href="./media/favicon.webp">
+    
+    <noscript>
+        <style>
+            #boot-layer { display: none !important; }
+            #transition-overlay { display: none !important; }
+            main { opacity: 1 !important; }
+        </style>
+    </noscript>
+</head>
+<body>
+    <!-- Transition Overlay -->
+    <div id="transition-overlay"></div>
+    
+    <!-- Fixed Background (Vanta) -->
+    <div id="vanta-bg"></div>
+    
+    <!-- Global Sidebars -->
+    <aside id="global-sidebar-left" class="global-sidebar left"></aside>
+    <aside id="global-sidebar-right" class="global-sidebar right"></aside>
+    
+    <!-- Loading Layer -->
+    <div id="boot-layer">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <!-- Mobile Menu Button -->
+        <div class="hamburger-menu" id="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links" id="nav-links-container">
+            <a href="#home-section" id="nav-home" class="nav-item active">{{ ui.nav.home }}</a>
+            <a href="#about-section" id="nav-about" class="nav-item">{{ ui.nav.about }}</a>
+            <a href="#projects-section" id="nav-projects" class="nav-item">{{ ui.nav.projects }}</a>
+            <a href="#certifications-section" id="nav-certifications" class="nav-item">{{ ui.nav.certs }}</a>
+            <a href="#footer-section" id="nav-end" class="nav-item">{{ ui.nav.end }}</a>
+        </nav>
+
+        <!-- Language Switcher -->
+        <div class="lang-switch">
+            <a href="en.html" class="lang-opt {% if lang == 'en' %}active{% endif %}">EN</a>
+            <a href="tr.html" class="lang-opt {% if lang == 'tr' %}active{% endif %}">TR</a>
+            <a href="ar.html" class="lang-opt {% if lang == 'ar' %}active{% endif %}">AR</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HOME / HERO SECTION -->
+        <section id="home-section" data-sidebar-left="" data-sidebar-right="">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="image-frame">
+                        <div class="pfp-shuffle-btn" title="Shuffle Profile Picture"><i class="fas fa-random"></i></div>
+                        
+                        <!-- ADD THIS LINE BELOW -->
+                        <div class="pfp-loader"></div>
+                        
+                        <img id="profile-pic" src="./media/{{ profile.pfp }}" alt="Profile" class="my-png">
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-text-wrapper">
+                        <h1 class="hero-name">
+                            <span class="name-first">{{ profile.name_first }}</span>
+                            <span class="name-last">{{ profile.name_last }}</span>
+                        </h1>
+                        
+                        <div class="social-links">
+                            {% for social in profile.socials %}
+                            <a href="{{ social.link }}" target="_blank" class="social-icon-btn"><i class="{{ social.icon }}"></i></a>
+                            {% endfor %}
+                        </div>
+                        
+                        <!-- Using 'safe' to allow <br> tags from JSON -->
+                        <p class="hero-subtitle">
+                            {{ profile.subtitle | safe }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about-section" data-sidebar-left="{{ ui.sidebar.about_l }}" data-sidebar-right="{{ ui.sidebar.about_r }}">
+            <h2 class="mobile-title">{{ ui.nav.about }}</h2>
+            <div class="content-container">
+                <div class="markdown-body">{{ about_html | safe }}</div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects-section" data-sidebar-left="{{ ui.sidebar.proj_l }}" data-sidebar-right="{{ ui.sidebar.proj_r }}">
+            <h2 class="mobile-title">{{ ui.nav.projects }}</h2>
+            <div class="content-container">
+                <div class="grid-container">
+                    {% for item in projects %}
+                    <div class="grid-card" data-images="{{ item.images_string }}">
+                        {% if item.thumb %}
+                            <img src="{{ item.thumb }}" alt="{{ item.title }}">
+                        {% else %}
+                            <!-- Fallback if no thumb exists -->
+                            <div style="width:100%;height:100%;background:#222;display:flex;align-items:center;justify-content:center;">No Image</div>
+                        {% endif %}
+                        <div class="card-title">{{ item.title }}</div>
+                        <div class="hidden-desc">{{ item.description | safe }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications-section" data-sidebar-left="{{ ui.sidebar.cert_l }}" data-sidebar-right="{{ ui.sidebar.cert_r }}">
+            <h2 class="mobile-title">{{ ui.nav.certs }}</h2>
+            <div class="content-container">
+                 <div class="grid-container">
+                    {% for item in certificates %}
+                    <div class="grid-card" data-images="{{ item.images_string }}">
+                        {% if item.thumb %}
+                            <img src="{{ item.thumb }}" alt="{{ item.title }}">
+                        {% else %}
+                            <div style="width:100%;height:100%;background:#222;display:flex;align-items:center;justify-content:center;">No Image</div>
+                        {% endif %}
+                        <div class="card-title">{{ item.title }}</div>
+                        <div class="hidden-desc">{{ item.description | safe }}</div>
+                    </div>
+                    {% endfor %}
+                 </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <section id="footer-section" data-sidebar-left="{{ ui.sidebar.end_l }}" data-sidebar-right="{{ ui.sidebar.end_r }}">
+            <div class="content-container">
+                <div class="footer-text">{{ ui.footer.text }}</div>
+                <div class="email-wrapper">
+                    {{ ui.footer.email_pre }} <a href="mailto:{{ profile.email }}" class="email-link">{{ profile.email }}</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL -->
+    <div id="detail-modal">
+        <div class="modal-close"><i class="fas fa-times"></i></div>
+        
+        <div class="modal-wrapper">
+            <!-- Modal Sidebar Left -->
+            <div class="modal-nav-sidebar left" id="proj-prev-sidebar">
+                <i class="fas fa-chevron-left sb-arrow"></i>
+                <div class="sb-text-wrapper">
+                    <span class="sb-text">{{ ui.modal_btn.prev }}</span>
+                </div>
+                <i class="fas fa-chevron-left sb-arrow"></i>
+            </div>
+
+            <div class="modal-content">
+                <div class="modal-gallery-card-wrapper">
+                    <div class="image-zoom-container">
+                        <div class="modal-loader"></div>
+                        <img id="modal-image" src="" alt="Project Image">
+                        <iframe id="modal-pdf" src="" type="application/pdf"></iframe>
+                        <div class="zoom-lens"></div>
+                        
+                        <div class="gallery-nav-overlay">
+                            <button class="gallery-arrow" id="prev-image"><i class="fas fa-chevron-left"></i></button>
+                            <button class="gallery-arrow" id="next-image"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="image-counter" id="image-counter"></div>
+                    </div>
+                </div>
+
+                <div class="modal-text">
+                    <div class="markdown-body" id="modal-description"></div>
+                </div>
+
+                <!-- Mobile Modal Navigation -->
+                <div class="project-nav-bottom">
+                    <button class="nav-btn-bottom" id="proj-prev-btn"><i class="fas fa-chevron-left"></i> {{ ui.modal_btn.prev }}</button>
+                    <button class="nav-btn-bottom" id="proj-next-btn">{{ ui.modal_btn.next }} <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Modal Sidebar Right -->
+            <div class="modal-nav-sidebar right" id="proj-next-sidebar">
+                <i class="fas fa-chevron-right sb-arrow"></i>
+                <div class="sb-text-wrapper">
+                    <span class="sb-text">{{ ui.modal_btn.next }}</span>
+                </div>
+                <i class="fas fa-chevron-right sb-arrow"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>const pfpList = {{ pfp_list | safe }};</script>
+    
+    <!-- Dependencies -->
+    <script src="./libs/p5.min.js"></script>
+    <script src="./libs/vanta.topology.min.js"></script>
+    
+    <!-- Vanta Init with Height Fix -->
+    <script>
+        window.addEventListener('load', () => {
+            // 1. MOBILE HEIGHT FIX: Lock the height in pixels
+            const bgElement = document.getElementById('vanta-bg');
+            const setBgHeight = () => {
+                if (bgElement) {
+                    bgElement.style.height = window.innerHeight + "px";
+                }
+            };
+            setBgHeight();
+
+            let lastWidth = window.innerWidth;
+            window.addEventListener('resize', () => {
+                if (window.innerWidth !== lastWidth) {
+                    lastWidth = window.innerWidth;
+                    setBgHeight();
+                }
+            });
+
+            // 2. Initialize Vanta
+            try {
+                VANTA.TOPOLOGY({
+                    el: "#vanta-bg",
+                    p5: p5, // Fixes No THREE error
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 0.40, // High density/speed look
+                    scaleMobile: 1.00,
+                    color: 0xd9e8ff,
+                    backgroundColor: 0x0
+                });
+            } catch (e) {
+                console.log("Vanta JS Error:", e);
+            }
+        });
+    </script>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

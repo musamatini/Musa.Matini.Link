@@ -1,0 +1,2 @@
+## Homies Tracker
+This is an app that I made using kotlin in Android studio. This is app tracks me and my 2 friends so every one of us can know how far the other 2 members are from school. Their personal info is blurred. The app were tested and it worked.
