@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PRIMARY META TAGS -->
     <title>{{ page_title }}</title>
-        
-    <!-- CSS -->
+    <meta name="description" content="{{ ui.seo.desc }}">
+    <meta name="keywords" content="{{ ui.seo.keywords }}">
+    <meta name="author" content="Musa Matini">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+
+    <!-- OPEN GRAPH / FACEBOOK / WHATSAPP / LINKEDIN -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ profile.domain }}/{{ lang }}.html">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ ui.seo.desc }}">
+    <meta property="og:image" content="{{ profile.domain }}/media/{{ profile.pfp }}">
+
+    <!-- TWITTER -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ profile.domain }}/{{ lang }}.html">
+    <meta property="twitter:title" content="{{ page_title }}">
+    <meta property="twitter:description" content="{{ ui.seo.desc }}">
+    <meta property="twitter:image" content="{{ profile.domain }}/media/{{ profile.pfp }}">
+
+    <!-- MULTI-LANGUAGE SEO (HREFLANG) - CRITICAL FOR GOOGLE -->
+    <link rel="canonical" href="{{ profile.domain }}/{{ lang }}.html">
+    <link rel="alternate" hreflang="en" href="{{ profile.domain }}/en.html">
+    <link rel="alternate" hreflang="tr" href="{{ profile.domain }}/tr.html">
+    <link rel="alternate" hreflang="ar" href="{{ profile.domain }}/ar.html">
+    <link rel="alternate" hreflang="x-default" href="{{ profile.domain }}/index.html">
+
+    <!-- STRUCTURED DATA (JSON-LD) - GOOGLE KNOWLEDGE GRAPH -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "{{ profile.name_first }} {{ profile.name_last }}",
+      "url": "{{ profile.domain }}",
+      "image": "{{ profile.domain }}/media/{{ profile.pfp }}",
+      "jobTitle": "Software Developer",
+      "sameAs": [
+        {% for social in profile.socials %}
+        "{{ social.link }}"{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+    </script>
+
+    <!-- FONTS & STYLES -->
     <link rel="stylesheet" href="./style.css">
     {% if lang == 'ar' %}<link rel="stylesheet" href="./rtl.css">{% endif %}
     <link rel="stylesheet" href="./css/all.min.css">

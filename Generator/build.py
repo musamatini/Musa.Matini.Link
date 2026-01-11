@@ -3,6 +3,7 @@ import json
 import shutil
 import markdown
 from jinja2 import Environment, FileSystemLoader
+from datetime import datetime
 
 # --- CONFIGURATION ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -23,7 +24,6 @@ def clean_and_prep_output():
 def copy_assets():
     print("-" * 30)
     print("[DEBUG] STARTING ASSET COPY...")
-    print(f"[DEBUG] Looking for assets in: {ASSETS_DIR}")
 
     # 1. Copy Core Files
     files_to_copy = ['style.css', 'rtl.css', 'script.js']
@@ -35,7 +35,7 @@ def copy_assets():
         else:
             print(f"[WARNING] File missing: {f}")
 
-    # 2. Copy Folders (Libs, Fonts, FontAwesome)
+    # 2. Copy Folders (Libs, Fonts, FontAwesome CSS & Webfonts)
     folders_to_copy = ['libs', 'fonts', 'css', 'webfonts']
     
     for folder in folders_to_copy:
@@ -43,31 +43,90 @@ def copy_assets():
         dest_path = os.path.join(OUTPUT_DIR, folder)
         
         if os.path.exists(src_path):
-            # Check if empty
             if not os.listdir(src_path):
                 print(f"[WARNING] Folder found but EMPTY: {folder}")
             else:
                 shutil.copytree(src_path, dest_path, dirs_exist_ok=True)
-                print(f"[SUCCESS] Copied folder: {folder} -> {dest_path}")
-                # List a few files to verify
-                files = os.listdir(src_path)[:3]
-                print(f"       -> Contains: {files}")
+                print(f"[SUCCESS] Copied folder: {folder}")
         else:
             print(f"[CRITICAL FAIL] Folder MISSING in assets: {folder}")
-            if folder == 'css' or folder == 'webfonts':
-                print("       -> This is why your icons are broken!")
+            if folder == 'webfonts':
+                print("       -> This is why icons might break!")
 
-    # 3. Copy Images & PFP
+    # 3. Copy Root Files (robots.txt, google verification if present)
+    for file in os.listdir(ASSETS_DIR):
+        if file.startswith("robots") or file.startswith("sitemap") or file.startswith("google"):
+             shutil.copy(os.path.join(ASSETS_DIR, file), os.path.join(OUTPUT_DIR, file))
+             print(f"[SUCCESS] Copied Root SEO file: {file}")
+
+    # 4. Copy Images & PFP
     pfp_list = []
     print("[DEBUG] Processing Media/Images...")
     for file in os.listdir(ASSETS_DIR):
-        if file.lower().endswith(VALID_IMG_EXTS_ONLY) or file == 'favicon.png':
+        if file.lower().endswith(VALID_IMG_EXTS_ONLY) or file == 'favicon.png' or file == 'favicon.webp':
             shutil.copy(os.path.join(ASSETS_DIR, file), os.path.join(OUTPUT_MEDIA_DIR, file))
             if file.startswith('me'):
                 pfp_list.append(f"./media/{file}")
     
     print(f"[DEBUG] Found {len(pfp_list)} PFP images.")
     return pfp_list
+
+def generate_sitemap(domain):
+    """Generates sitemap.xml for Google SEO."""
+    print(f"[SEO] Generating sitemap.xml for {domain}...")
+    
+    # Remove trailing slash if user added it
+    if domain.endswith('/'): domain = domain[:-1]
+    
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    
+    sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>{domain}/</loc>
+        <lastmod>{date_str}</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>{domain}/en.html</loc>
+        <lastmod>{date_str}</lastmod>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="{domain}/tr.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="{domain}/ar.html"/>
+    </url>
+    <url>
+        <loc>{domain}/tr.html</loc>
+        <lastmod>{date_str}</lastmod>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="{domain}/en.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="{domain}/ar.html"/>
+    </url>
+    <url>
+        <loc>{domain}/ar.html</loc>
+        <lastmod>{date_str}</lastmod>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="{domain}/en.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="{domain}/tr.html"/>
+    </url>
+</urlset>"""
+
+    with open(os.path.join(OUTPUT_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap_content)
+
+def generate_robots(domain):
+    """Generates robots.txt."""
+    print("[SEO] Generating robots.txt...")
+    # Remove trailing slash for consistency
+    if domain.endswith('/'): domain = domain[:-1]
+    
+    robots_content = f"""User-agent: *
+Allow: /
+
+Sitemap: {domain}/sitemap.xml
+"""
+    with open(os.path.join(OUTPUT_DIR, 'robots.txt'), 'w', encoding='utf-8') as f:
+        f.write(robots_content)
 
 def load_localized_text(base_path, lang):
     content = ""
@@ -182,6 +241,9 @@ def build_site():
         print("CRITICAL: data.json not found in content directory.")
         return
 
+    # Extract Domain for SEO
+    domain_url = data_json.get('common', {}).get('domain', 'https://musamatini.com')
+
     env = Environment(loader=FileSystemLoader(os.path.join(BASE_DIR)))
     try:
         template = env.get_template('template.html')
@@ -193,10 +255,13 @@ def build_site():
         print(f"Generating {lang}.html...")
         lang_data = data_json.get(lang, data_json['en'])
         
+        # Merge common data with lang specific data
+        profile_data = {**data_json['common'], **lang_data}
+        
         context = {
             'lang': lang,
             'page_title': lang_data.get('page_title', 'Musa Matini'),
-            'profile': {**data_json['common'], **lang_data},
+            'profile': profile_data,
             'ui': lang_data,
             'about_html': load_localized_text(os.path.join(CONTENT_DIR, 'about'), lang),
             'projects': process_section_folders('projects', lang),
@@ -209,6 +274,8 @@ def build_site():
             f.write(output)
             
     generate_entry_point()
+    generate_sitemap(domain_url)
+    generate_robots(domain_url)
     print("Build complete! Output located at:", OUTPUT_DIR)
 
 if __name__ == "__main__":

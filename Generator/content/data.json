@@ -1,5 +1,6 @@
 {
     "common": {
+        "domain": "https://musa.matini.link",
         "email": "musamat00@gmail.com",
         "pfp": "me.webp",
         "socials": [
@@ -7,12 +8,16 @@
             {"icon": "fab fa-linkedin", "link": "https://www.linkedin.com/in/musamatini"},
             {"icon": "fab fa-twitter", "link": "https://twitter.com/MusaAhmadMatini"},
             {"icon": "fab fa-instagram", "link": "https://www.instagram.com/musa_matini/"},
-            {"icon": "fab fa-youtube", "link": "https://www.youtube.com/@Musa_Matini"},
+            {"icon": "fab fa-discord", "link": "#"},
             {"icon": "fas fa-envelope", "link": "mailto:musamat00@gmail.com"}
         ]
     },
     "en": {
-        "page_title": "I Am Musa Matini",
+        "page_title": "I am Musa Matini",
+        "seo": {
+            "desc": "Portfolio of Musa Matini, a Software Developer specializing in Python, Full Stack Web Development, and Embedded Systems.",
+            "keywords": "Musa Matini, Software Developer, Python Developer, Web Development, Embedded Systems, Portfolio"
+        },
         "name_first": "MUSA",
         "name_last": "MATINI",
         "subtitle": "A Software Developer who hasn't<br>sold his soul yet.",
@@ -23,6 +28,10 @@
     },
     "tr": {
         "page_title": "Ben Musa Matini",
+        "seo": {
+            "desc": "Musa Matini'nin portföyü. Python, Full Stack Web Geliştirme ve Gömülü Sistemler konusunda uzmanlaşmış Yazılım Geliştirici.",
+            "keywords": "Musa Matini, Yazılım Geliştirici, Python Uzmanı, Web Tasarım, Gömülü Sistemler, Portföy"
+        },
         "name_first": "MUSA",
         "name_last": "MATINI",
         "subtitle": "Henüz ruhunu satmamış<br>bir Yazılım Geliştiricisi.",
@@ -33,6 +42,10 @@
     },
     "ar": {
         "page_title": "أنا موسى متيني",
+        "seo": {
+            "desc": "الملف الشخصي لموسى متيني، مطور برمجيات متخصص في بايثون، تطوير الويب، والأنظمة المدمجة.",
+            "keywords": "موسى متيني, مطور برمجيات, مبرمج بايثون, تطوير ويب, أنظمة مدمجة"
+        },
         "name_first": "موسى",
         "name_last": "متيني",
         "subtitle": "مطور برمجيات لم يبع روحه بعد.",
