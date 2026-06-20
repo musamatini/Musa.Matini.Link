@@ -2,7 +2,7 @@
     "common": {
         "domain": "https://musa.matini.link",
         "email": "musa@matini.link",
-        "pfp": "me.webp",
+        "pfp": "me0.webp",
         "socials": [
             {"icon": "fab fa-github", "link": "https://github.com/musamatini"},
             {"icon": "fab fa-linkedin", "link": "https://www.linkedin.com/in/musamatini"},
