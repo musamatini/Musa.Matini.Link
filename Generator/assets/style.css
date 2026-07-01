@@ -87,28 +87,24 @@ body {
         opacity: 0.4;      /* Slight dimming for readability */
     }
 }
-/* --- VANTA BACKGROUND CONTAINER --- */
-#vanta-bg {
+/* --- STATIC BACKGROUND CONTAINER --- */
+#static-bg {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
-    z-index: -1; 
+    height: 100%;
+    z-index: -1;
     pointer-events: none;
-    
-    /* Hardware Acceleration */
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-    
-    /* Performance hint for the blur */
-    will-change: filter; 
 
-    /* The Animation: Wait 0.5s, then blur over 5 seconds, and stay blurred */
-    animation: blurFadeIn 20s ease-out forwards;
-    animation-delay: 0.5s; 
+    background-image: url('./media/bg.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* Soft dark overlay so foreground text stays readable on busy images */
+    box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.35);
 }
 
 /* Vignette Overlay (Subtle) */
@@ -728,8 +724,9 @@ main>section {
     .hamburger-menu { display: block; order: 1; }
     .lang-switch { order: 2; }
 
-    #vanta-bg {
-        height: 100%;
+    #static-bg {
+        /* background-attachment: fixed can stutter on iOS Safari, fall back to scroll */
+        background-attachment: scroll;
     }
 
     .nav-links {

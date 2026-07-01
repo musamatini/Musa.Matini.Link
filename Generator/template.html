@@ -68,8 +68,8 @@
     <!-- Transition Overlay -->
     <div id="transition-overlay"></div>
     
-    <!-- Fixed Background (Vanta) -->
-    <div id="vanta-bg"></div>
+    <!-- Fixed Background (Static Image) -->
+    <div id="static-bg"></div>
     
     <!-- Global Sidebars -->
     <aside id="global-sidebar-left" class="global-sidebar left"></aside>
@@ -256,51 +256,8 @@
     <!-- SCRIPTS -->
     <script>const pfpList = {{ pfp_list | safe }};</script>
     
-    <!-- Dependencies -->
-    <script src="./libs/p5.min.js"></script>
-    <script src="./libs/vanta.topology.min.js"></script>
-    
-    <!-- Vanta Init with Height Fix -->
-    <script>
-        window.addEventListener('load', () => {
-            // 1. MOBILE HEIGHT FIX: Lock the height in pixels
-            const bgElement = document.getElementById('vanta-bg');
-            const setBgHeight = () => {
-                if (bgElement) {
-                    bgElement.style.height = window.innerHeight + "px";
-                }
-            };
-            setBgHeight();
+    <!-- Dependencies: none (static background, no animation libraries) -->
 
-            let lastWidth = window.innerWidth;
-            window.addEventListener('resize', () => {
-                if (window.innerWidth !== lastWidth) {
-                    lastWidth = window.innerWidth;
-                    setBgHeight();
-                }
-            });
-
-            // 2. Initialize Vanta
-            try {
-                VANTA.TOPOLOGY({
-                    el: "#vanta-bg",
-                    p5: p5, // Fixes No THREE error
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.00,
-                    minWidth: 200.00,
-                    scale: 0.40, // High density/speed look
-                    scaleMobile: 1.00,
-                    color: 0xd9e8ff,
-                    backgroundColor: 0x0
-                });
-            } catch (e) {
-                console.log("Vanta JS Error:", e);
-            }
-        });
-    </script>
-    
     <script src="./script.js"></script>
 </body>
 </html>

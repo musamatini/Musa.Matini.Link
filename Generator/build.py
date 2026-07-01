@@ -35,8 +35,8 @@ def copy_assets():
         else:
             print(f"[WARNING] File missing: {f}")
 
-    # 2. Copy Folders (Libs, Fonts, FontAwesome CSS & Webfonts)
-    folders_to_copy = ['libs', 'fonts', 'css', 'webfonts']
+    # 2. Copy Folders (Fonts, FontAwesome CSS & Webfonts)
+    folders_to_copy = ['fonts', 'css', 'webfonts']
     
     for folder in folders_to_copy:
         src_path = os.path.join(ASSETS_DIR, folder)
