@@ -598,6 +598,10 @@ html[lang="tr"] .name-last {
     color: var(--color-white);
 }
 
+.markdown-body.about-text {
+    font-size: clamp(17px, 1.4vw, 21px);
+}
+
 .markdown-body h1,
 .markdown-body h2 {
     font-family: "Libre Baskerville", monospace;
@@ -626,7 +630,7 @@ html[lang="tr"] .name-last {
 /* In-card section heading (mirrors the About "WHO AM I?" h2) */
 .section-title {
     font-family: "Libre Baskerville", serif;
-    font-size: clamp(24px, 1.8vw, 27px);
+    font-size: clamp(26px, 2vw, 30px);
     font-weight: 700;
     line-height: 1.7;
     color: var(--color-white);
