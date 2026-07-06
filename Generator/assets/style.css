@@ -316,6 +316,8 @@ main>section {
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     height: 100%;
     box-sizing: border-box;
 }
@@ -328,8 +330,8 @@ main>section {
 }
 
 /* INCREASED SPACING FOR DESKTOP */
-.hero-left { justify-content: flex-end; align-items: center; padding-right: 80px; }
-.hero-right { flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 80px; }
+.hero-left { justify-content: flex-start; align-items: center; padding-left: 140px; }
+.hero-right { flex-direction: column; justify-content: center; align-items: flex-end; padding-right: 140px; }
 
 .image-frame {
     width: clamp(250px, 25vw, 400px);
