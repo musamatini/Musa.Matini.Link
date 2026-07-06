@@ -581,8 +581,8 @@ html[lang="tr"] .name-last {
     display: flex;
     flex-direction: column;
 }
-.content-container > .section-title { flex-shrink: 0; align-self: stretch; width: 100%; }
-.content-container > .grid-container { margin: auto 0; }
+.content-container > .section-title { flex-shrink: 0; align-self: stretch; width: 100%; margin-bottom: 35px; }
+.content-container > .grid-container { margin: auto 0; align-self: stretch; }
 
 .content-container::-webkit-scrollbar {
     width: 4px;
@@ -656,13 +656,13 @@ html[lang="tr"] .name-last {
     /* Horizontal Center ONLY */
     justify-content: center;
 
-    /* Vertical: Start from the top (Don't center vertically) */
-    align-items: flex-start;
-    align-content: flex-start;
+    /* Vertical: Center the grid contents */
+    align-items: center;
+    align-content: center;
 
     gap: 20px;
     width: 100%;
-    padding-bottom: 20px; /* Space at bottom for scrolling */
+    padding: 0;
 }
 
 .grid-card {
@@ -681,6 +681,7 @@ html[lang="tr"] .name-last {
     transition: transform 0.2s ease;
     cursor: pointer;
     user-select: none;
+    border-radius: var(--radius);
 }
 
 .grid-card:hover {
@@ -724,7 +725,7 @@ html[lang="tr"] .name-last {
     font-family: "Libre Baskerville", serif;
     font-size: clamp(24px, 2.5vw, 400px);
     text-align: center;
-    margin: 36px 0 30px 0;
+    margin: 0 0 30px 0;
 }
 .email-wrapper {
     font-size: clamp(16px, 1.2vw, 20px);
@@ -776,7 +777,7 @@ html[lang="tr"] .name-last {
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    border-radius: var(--radius);
+    border-radius: 0;
 }
 
 .modal-nav-sidebar {
@@ -791,6 +792,7 @@ html[lang="tr"] .name-last {
     transition: all 0.2s ease;
     z-index: 1002;
     gap: 40px;
+    border-radius: var(--radius);
 }
 
 .modal-nav-sidebar:hover {
@@ -799,9 +801,11 @@ html[lang="tr"] .name-last {
 }
 .modal-nav-sidebar.left {
     border-right: none;
+    border-radius: var(--radius) 0 0 var(--radius);
 }
 .modal-nav-sidebar.right {
     border-left: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
 }
 .sb-text-wrapper {
     display: flex;
@@ -848,6 +852,7 @@ html[lang="tr"] .name-last {
     justify-content: center;
     cursor: none;
     overflow: hidden;
+}
     touch-action: none;
 }
 
