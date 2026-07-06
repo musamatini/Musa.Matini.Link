@@ -420,6 +420,7 @@ main > section {
     object-fit: cover;
     object-position: center center;
     transition: opacity 0.3s ease;
+    border-radius: var(--radius);
 }
 
 .pfp-shuffle-btn {
