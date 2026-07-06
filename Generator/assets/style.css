@@ -64,6 +64,7 @@
     --scrollbar-track: transparent;
     --scrollbar-thumb: rgba(255, 255, 255, 0.2);
     --scrollbar-thumb-hover: rgba(255, 255, 255, 0.5);
+    --radius: 5px;
 }
 
 html {
@@ -290,6 +291,8 @@ header a.nav-item.active {
 .lang-switch {
     display: flex;
     border: 1px solid var(--color-white);
+    border-radius: var(--radius);
+    overflow: hidden;
 }
 
 .lang-opt {
@@ -404,9 +407,11 @@ main > section {
     width: clamp(250px, 25vw, 400px);
     border: 2px solid var(--color-white);
     background: var(--color-black);
-    padding: 0; /* CHANGED: Was 15px. Now 0 removes the inner border */
+    padding: 0;
     aspect-ratio: 1 / 1;
     position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
 }
 
 .my-png {
@@ -553,6 +558,7 @@ html[lang="tr"] .name-last {
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    border-radius: var(--radius);
 }
 
 .social-icon-btn:hover {
@@ -571,6 +577,7 @@ html[lang="tr"] .name-last {
     padding: 30px 40px;
     box-sizing: border-box;
     overflow-y: auto;
+    border-radius: var(--radius);
     display: flex;
     flex-direction: column;
 }
@@ -904,7 +911,7 @@ html[lang="tr"] .name-last {
     cursor: pointer;
     pointer-events: auto;
     transition: all 0.2s;
-    border-radius: 50%;
+    border-radius: var(--radius);
 }
 .gallery-arrow:hover {
     background: var(--color-white);
