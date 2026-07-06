@@ -335,7 +335,7 @@ main::-webkit-scrollbar-track {
 }
 main::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb);
-    border-radius: 4px;
+    border-radius: var(--radius);
 }
 
 main > section {
@@ -411,7 +411,6 @@ main > section {
     aspect-ratio: 1 / 1;
     position: relative;
     border-radius: var(--radius);
-    overflow: hidden;
 }
 
 .my-png {
@@ -436,9 +435,10 @@ main > section {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 10;
+    z-index: 20;
     font-size: 18px;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: var(--radius);
 }
 
 .pfp-shuffle-btn i {
@@ -581,7 +581,7 @@ html[lang="tr"] .name-last {
     display: flex;
     flex-direction: column;
 }
-.content-container > .section-title { flex-shrink: 0; }
+.content-container > .section-title { flex-shrink: 0; align-self: stretch; width: 100%; }
 .content-container > .grid-container { margin: auto 0; }
 
 .content-container::-webkit-scrollbar {
@@ -635,9 +635,18 @@ html[lang="tr"] .name-last {
     line-height: 1.7;
     color: var(--color-white);
     text-align: center;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0.45em 0 0 0;
+    position: relative;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
     border-bottom: 1px solid #555;
-    padding-bottom: 16px;
-    margin: 0.45em 0 30px 0;
 }
 
 .grid-container {
@@ -708,7 +717,6 @@ html[lang="tr"] .name-last {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
     padding: 40px 60px;
 }
 
@@ -716,6 +724,7 @@ html[lang="tr"] .name-last {
     font-family: "Libre Baskerville", serif;
     font-size: clamp(24px, 2.5vw, 400px);
     text-align: center;
+    margin: 36px 0 30px 0;
 }
 .email-wrapper {
     font-size: clamp(16px, 1.2vw, 20px);
@@ -767,6 +776,7 @@ html[lang="tr"] .name-last {
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    border-radius: var(--radius);
 }
 
 .modal-nav-sidebar {
@@ -933,7 +943,7 @@ html[lang="tr"] .name-last {
     font-size: 14px;
     font-weight: bold;
     pointer-events: none;
-    border-radius: 4px;
+    border-radius: var(--radius);
     z-index: 15;
 }
 
@@ -953,7 +963,7 @@ html[lang="tr"] .name-last {
 }
 .modal-text::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb);
-    border-radius: 4px;
+    border-radius: var(--radius);
 }
 
 .modal-close {
@@ -976,6 +986,7 @@ html[lang="tr"] .name-last {
     cursor: pointer;
     z-index: 1001;
     transition: all 0.2s;
+    border-radius: var(--radius);
 }
 .modal-close:hover {
     background: var(--color-white);
@@ -1003,13 +1014,14 @@ html[lang="tr"] .name-last {
     justify-content: center;
     gap: 10px;
     transition: background 0.2s;
+    border-radius: var(--radius);
 }
 .nav-btn-bottom:hover {
     background: var(--color-white);
     color: var(--color-black);
 }
 .nav-btn-bottom + .nav-btn-bottom {
-    border-left: 2px solid var(--color-white);
+    border-left: none;
 }
 
 /* --- MOBILE & RESPONSIVE RULES --- */

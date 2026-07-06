@@ -194,8 +194,10 @@
         </section>
 
         <!-- FOOTER SECTION -->
-        <section id="footer-section" data-sidebar-left="{{ ui.sidebar.end_l }}" data-sidebar-right="{{ ui.sidebar.end_r }}">
+        <section id="footer-section" data-sidebar-left="" data-sidebar-right="">
+            <h2 class="mobile-title">{{ ui.nav.end }}</h2>
             <div class="content-container">
+                <h2 class="section-title">{{ ui.end_title }}</h2>
                 <div class="footer-text">{{ ui.footer.text }}</div>
                 <div class="email-wrapper">
                     {{ ui.footer.email_pre }} <a href="mailto:{{ profile.email }}" class="email-link">{{ profile.email }}</a>
