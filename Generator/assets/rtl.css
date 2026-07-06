@@ -9,8 +9,11 @@ html,
 .sb-text,
 .markdown-body h1,
 .markdown-body h2,
-.footer-text {
-    font-family: 'Cairo', 'Courier Prime', sans-serif;
+.footer-text,
+.section-title,
+.card-title,
+.grid-card .card-title {
+    font-family: 'Cairo', 'Courier Prime', sans-serif !important;
     letter-spacing: normal !important;
 }
 
@@ -21,20 +24,20 @@ html,
 .card-title,
 .global-sidebar {
     -webkit-text-stroke: 0 !important;
-    text-shadow: 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000, 
-       0 0 2px #000 !important;
+    text-shadow:
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000,
+       0 0 1px #000 !important;
 }
 
 body {
@@ -59,13 +62,17 @@ body {
     gap: 30px;
 }
 
-/* Ensure both sides remain centered in Arabic */
+/* Text appears on the LEFT in Arabic, image on the RIGHT */
 .hero-right {
-    align-items: flex-end;
+    align-items: flex-start;
+    padding-right: 140px !important;
+    padding-left: 0 !important;
 }
 
 .hero-left {
-    justify-content: flex-start;
+    justify-content: flex-end;
+    padding-left: 140px !important;
+    padding-right: 0 !important;
 }
 
 /* 
@@ -74,8 +81,9 @@ body {
    We reduce the bottom padding of the hero container specifically for desktop.
 */
 #home-section {
-    padding-bottom: 0 !important; 
-    justify-content: flex-end; /* Push content slightly down/center */
+    min-height: 110vh !important;
+    padding-bottom: 80px !important;
+    justify-content: flex-end;
 }
 
 /* Adjust margins for content inside hero */
