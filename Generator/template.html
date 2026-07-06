@@ -142,17 +142,19 @@
         </section>
 
         <!-- ABOUT SECTION -->
-        <section id="about-section" data-sidebar-left="{{ ui.sidebar.about_l }}" data-sidebar-right="{{ ui.sidebar.about_r }}">
+        <section id="about-section" data-sidebar-left="" data-sidebar-right="">
             <h2 class="mobile-title">{{ ui.nav.about }}</h2>
             <div class="content-container">
+                <h2 class="section-title">{{ ui.about_title }}</h2>
                 <div class="markdown-body">{{ about_html | safe }}</div>
             </div>
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section id="projects-section" data-sidebar-left="{{ ui.sidebar.proj_l }}" data-sidebar-right="{{ ui.sidebar.proj_r }}">
+        <section id="projects-section" data-sidebar-left="" data-sidebar-right="">
             <h2 class="mobile-title">{{ ui.nav.projects }}</h2>
             <div class="content-container">
+                <h2 class="section-title">{{ ui.sidebar.proj_l | replace('|', ' ') }}</h2>
                 <div class="grid-container">
                     {% for item in projects %}
                     <div class="grid-card" data-images="{{ item.images_string }}">
@@ -171,9 +173,10 @@
         </section>
 
         <!-- CERTIFICATIONS SECTION -->
-        <section id="certifications-section" data-sidebar-left="{{ ui.sidebar.cert_l }}" data-sidebar-right="{{ ui.sidebar.cert_r }}">
+        <section id="certifications-section" data-sidebar-left="" data-sidebar-right="">
             <h2 class="mobile-title">{{ ui.nav.certs }}</h2>
             <div class="content-container">
+                 <h2 class="section-title">{{ ui.sidebar.cert_l | replace('|', ' ') }}</h2>
                  <div class="grid-container">
                     {% for item in certificates %}
                     <div class="grid-card" data-images="{{ item.images_string }}">

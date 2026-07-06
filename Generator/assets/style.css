@@ -571,7 +571,11 @@ html[lang="tr"] .name-last {
     padding: 30px 40px;
     box-sizing: border-box;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
+.content-container > .section-title { flex-shrink: 0; }
+.content-container > .grid-container { margin: auto 0; }
 
 .content-container::-webkit-scrollbar {
     width: 4px;
@@ -610,6 +614,19 @@ html[lang="tr"] .name-last {
     color: var(--color-white);
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+/* In-card section heading (mirrors the About "WHO AM I?" h2) */
+.section-title {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(24px, 1.8vw, 27px);
+    font-weight: 700;
+    line-height: 1.7;
+    color: var(--color-white);
+    text-align: center;
+    border-bottom: 1px solid #555;
+    padding-bottom: 16px;
+    margin: 0.45em 0 30px 0;
 }
 
 .grid-container {
@@ -1086,11 +1103,11 @@ html[lang="tr"] .name-last {
     }
 
     .mobile-title {
+        display: none;
+    }
+
+    .section-title {
         display: block;
-        border-left: 2px solid var(--color-white);
-        border-right: 2px solid var(--color-white);
-        border-top: 2px solid var(--color-white);
-        border-bottom: none;
         margin-top: 0;
     }
 

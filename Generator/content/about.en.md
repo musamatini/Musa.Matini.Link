@@ -1,5 +1,3 @@
-## WHO AM I?
-
 Writing about myself was both fun and challenging. Maybe people have forgotten how writing feels because they don’t use their brains to write as much anymore.
 
 My name is **Musa Matini**. I am a **17-year-old Muslim Syrian Software Developer**, based in the capital of a lot of cool stuff, **Damascus**.

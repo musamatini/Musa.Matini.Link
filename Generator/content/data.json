@@ -14,6 +14,7 @@
     },
     "en": {
         "page_title": "I am Musa Matini",
+        "about_title": "WHO AM I?",
         "seo": {
             "desc": "Portfolio of Musa Matini, a Software Developer specializing in Python, Full Stack Web Development, and Embedded Systems.",
             "keywords": "Musa Matini, Software Developer, Python Developer, Web Development, Embedded Systems, Portfolio"
@@ -28,6 +29,7 @@
     },
     "tr": {
         "page_title": "Ben Musa Matini",
+        "about_title": "BEN KİMİM?",
         "seo": {
             "desc": "Musa Matini'nin portföyü. Python, Full Stack Web Geliştirme ve Gömülü Sistemler konusunda uzmanlaşmış Yazılım Geliştirici.",
             "keywords": "Musa Matini, Yazılım Geliştirici, Python Uzmanı, Web Tasarım, Gömülü Sistemler, Portföy"
@@ -42,6 +44,7 @@
     },
     "ar": {
         "page_title": "أنا موسى متيني",
+        "about_title": "من أنا؟",
         "seo": {
             "desc": "الملف الشخصي لموسى متيني، مطور برمجيات متخصص في بايثون، تطوير الويب، والأنظمة المدمجة.",
             "keywords": "موسى متيني, مطور برمجيات, مبرمج بايثون, تطوير ويب, أنظمة مدمجة"

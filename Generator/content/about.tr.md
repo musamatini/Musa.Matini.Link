@@ -1,5 +1,3 @@
-## BEN KİMİM?
-
 Kendim hakkında yazmak hem eğlenceli hem de zorlayıcıydı. Belki de insanlar, artık yazı yazmak için beyinlerini eskisi kadar sık kullanmadıkları için yazmanın nasıl bir his olduğunu unutmuşlardır.
 
 Adım **Musa Matini**. Pek çok havalı şeyin başkenti olan **Şam**'da yaşayan, **17 yaşında, Müslüman, Suriyeli bir Yazılım Geliştiricisiyim**.
