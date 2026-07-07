@@ -75,6 +75,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- LANGUAGE DROPDOWN ---
+    const langDropdown = document.getElementById('lang-dropdown');
+    const langCurrentBtn = document.getElementById('lang-current-btn');
+
+    if (langDropdown && langCurrentBtn) {
+        const setOpen = (open) => {
+            langDropdown.classList.toggle('open', open);
+            langCurrentBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+
+        langCurrentBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            setOpen(!langDropdown.classList.contains('open'));
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langDropdown.contains(e.target)) setOpen(false);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setOpen(false);
+        });
+    }
+
     // --- SCROLL SPY (RATIO BASED FIX) ---
     // Instead of a single trigger point, we track which section
     // takes up the MOST space on screen. This fixes the trackpad scroll glitch.

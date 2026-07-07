@@ -97,11 +97,22 @@
             <a href="#footer-section" id="nav-end" class="nav-item">{{ ui.nav.end }}</a>
         </nav>
 
-        <!-- Language Switcher -->
-        <div class="lang-switch">
-            <a href="en.html" class="lang-opt {% if lang == 'en' %}active{% endif %}">EN</a>
-            <a href="tr.html" class="lang-opt {% if lang == 'tr' %}active{% endif %}">TR</a>
-            <a href="ar.html" class="lang-opt {% if lang == 'ar' %}active{% endif %}">AR</a>
+        <!-- Language Switcher (Dropdown) -->
+        <div class="lang-switch" id="lang-dropdown">
+            <button class="lang-current" id="lang-current-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="lang-current-label">
+                    {% if lang == 'en' %}English
+                    {% elif lang == 'tr' %}Türkçe
+                    {% else %}العربية
+                    {% endif %}
+                </span>
+                <i class="fas fa-chevron-down lang-chevron" aria-hidden="true"></i>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="listbox">
+                <li role="option"><a href="en.html" class="lang-opt {% if lang == 'en' %}active{% endif %}">English</a></li>
+                <li role="option"><a href="tr.html" class="lang-opt {% if lang == 'tr' %}active{% endif %}">Türkçe</a></li>
+                <li role="option"><a href="ar.html" class="lang-opt {% if lang == 'ar' %}active{% endif %}">العربية</a></li>
+            </ul>
         </div>
     </header>
 
