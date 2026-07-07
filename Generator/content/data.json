@@ -38,7 +38,7 @@
         },
         "name_first": "MUSA",
         "name_last": "MATINI",
-        "subtitle": "Ruhunu satmamış<br>bir Yazılım Geliştiricisi.",
+        "subtitle": "Ruhunu satmamış bir Yazılım Geliştiricisi.",
         "nav": { "home": "Ana Sayfa", "about": "Hakkımda", "projects": "Projeler", "certs": "Sertifikalarım", "end": "SON" },
         "sidebar": { "about_l": "HAKKIMDA", "about_r": "HAKKIMDA", "proj_l": "PROJELERIM", "proj_r": "PROJELERIM", "cert_l": "SERTİFİKALARIM", "cert_r": "SERTİFİKALARIM", "end_l": "VE", "end_r": "SON" },
         "footer": { "text": "Dijital evimi ziyaret ettiğiniz için teşekkürler.", "email_pre": "Bana e-posta yaz:" },

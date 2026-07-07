@@ -553,6 +553,7 @@ html[lang="tr"] .name-last {
     color: var(--color-grey-lighter);
     margin: 20px 0 0 0;
     width: 100%;
+    max-width: clamp(280px, 30vw, 390px);
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
