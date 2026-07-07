@@ -303,6 +303,7 @@ header a.nav-item.active {
 
 .lang-switch {
     position: relative;
+    width: 120px;
     border: 1px solid var(--color-white);
     border-radius: var(--radius);
     background: rgba(14, 14, 14, 0.35);
@@ -313,18 +314,21 @@ header a.nav-item.active {
 .lang-current {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
     background: transparent;
     border: none;
     color: var(--color-white);
-    padding: 6px 15px;
+    padding: 8px 12px;
     font-family: inherit;
-    font-size: clamp(12px, 0.9vw, 14px);
+    font-size: clamp(11px, 0.8vw, 13px);
     font-weight: 700;
     cursor: pointer;
     border-radius: var(--radius);
     transition: background-color 0.2s;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .lang-current:hover {
@@ -344,9 +348,11 @@ header a.nav-item.active {
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
+    width: 100%;
     min-width: 100%;
+    box-sizing: border-box;
     margin: 0;
-    padding: 6px;
+    padding: 5px;
     list-style: none;
     border: 1px solid var(--color-white);
     border-radius: var(--radius);
@@ -376,8 +382,8 @@ header a.nav-item.active {
     display: block;
     color: var(--color-grey-light);
     text-decoration: none;
-    padding: 8px 15px;
-    font-size: clamp(12px, 0.9vw, 14px);
+    padding: 8px 12px;
+    font-size: clamp(11px, 0.8vw, 13px);
     font-weight: 700;
     border-radius: calc(var(--radius) - 2px);
     transition: background-color 0.2s, color 0.2s;
