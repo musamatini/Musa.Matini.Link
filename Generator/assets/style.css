@@ -88,6 +88,14 @@ body {
     overflow-x: hidden;
 }
 
+/* Slightly open up Latin scripts (EN/TR) for readability.
+   Applies broadly; .name-first / .name-last keep their own explicit
+   letter-spacing values, so the hero name is unaffected. */
+html[lang="en"] *,
+html[lang="tr"] * {
+    letter-spacing: 0.06em;
+}
+
 @keyframes blurFadeIn {
     20% {
         filter: blur(0px); /* Crystal clear start */
@@ -689,6 +697,7 @@ html[lang="tr"] .name-last {
     font-size: clamp(16px, 1.2vw, 18px);
     line-height: 1.7;
     color: var(--color-white);
+    letter-spacing: 0.06em;
 }
 
 .markdown-body.about-text {
