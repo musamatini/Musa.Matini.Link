@@ -23,7 +23,7 @@
         "name_first": "MUSA",
         "name_last": "MATINI",
         "subtitle": "A Software Developer who hasn't<br>sold his soul.",
-        "nav": { "home": "Home", "about": "About", "projects": "Projects", "certs": "Certifications", "end": "THE END" },
+        "nav": { "home": "Home", "about": "About", "projects": "Projects", "certs": "Certifications", "end": "END" },
         "sidebar": { "about_l": "ABOUT|ME", "about_r": "ABOUT|ME", "proj_l": "MY|PROJECTS", "proj_r": "MY|PROJECTS", "cert_l": "MY|CERTIFICATIONS", "cert_r": "MY|CERTIFICATIONS", "end_l": "THE", "end_r": "END" },
         "footer": { "text": "Thank you for visiting my digital home.", "email_pre": "Email me at" },
         "modal_btn": { "prev": "PREVIOUS", "next": "NEXT" }

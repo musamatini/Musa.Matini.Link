@@ -730,15 +730,11 @@ html[lang="tr"] .name-last {
 }
 
 /* --- FOOTER --- */
+/* Footer shares width/padding/border with the other cards (matches the
+   project/cert content-containers) but stays height:auto so short footer
+   content doesn't leave a giant empty card. */
 #footer-section .content-container {
     height: auto;
-    width: fit-content;
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 60px;
 }
 
 .footer-text {
@@ -751,6 +747,7 @@ html[lang="tr"] .name-last {
     font-size: clamp(16px, 1.2vw, 20px);
     font-weight: 700;
     color: var(--color-grey-light);
+    text-align: center;
 }
 .email-link {
     color: var(--color-white);
@@ -1247,15 +1244,6 @@ html[lang="tr"] .name-last {
         justify-content: center;
         margin-bottom: 0;
         padding-bottom: 80px;
-    }
-    #footer-section .content-container {
-        height: auto;
-        width: 90%;
-        max-height: none;
-        border: 2px solid var(--color-white);
-        padding: 40px 30px;
-        flex-grow: 0;
-        margin: auto;
     }
     .footer-text {
         font-size: 24px;
