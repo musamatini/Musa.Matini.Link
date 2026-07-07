@@ -19,8 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (document.querySelector('main')) {
-        document.querySelector('main').scrollTo(0, 0);
+    // --- SCROLLBAR GUTTER SYNC ---
+    // <main>'s scrollbar consumes layout space in Firefox (overflow-y:overlay
+    // is ignored there), shifting cards left while the fixed header stays put.
+    // Measure the actual gutter and expose it as --scrollbar-w so the header
+    // can compensate. In Chromium/Safari this stays at 0px.
+    const mainEl = document.querySelector('main');
+    const syncScrollbarGutter = () => {
+        if (!mainEl) return;
+        const gutter = mainEl.offsetWidth - mainEl.clientWidth;
+        document.documentElement.style.setProperty('--scrollbar-w', gutter + 'px');
+    };
+    syncScrollbarGutter();
+    window.addEventListener('resize', syncScrollbarGutter);
+
+    if (mainEl) {
+        mainEl.scrollTo(0, 0);
     }
 
     const bootLayer = document.getElementById('boot-layer');

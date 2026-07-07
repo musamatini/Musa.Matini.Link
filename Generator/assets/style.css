@@ -42,6 +42,10 @@
 :root {
     --text-color: #ffffff;
     --header-height: 70px;
+    /* Width of <main>'s scrollbar. Set by JS.
+       Used to shift header so it stays centered with the cards
+       in browsers where scrollbars consume layout space (Firefox). */
+    --scrollbar-w: 0px;
 
     /* Colors */
     --color-black: #000000;
@@ -209,19 +213,28 @@ body::after {
 /* --- HEADER --- */
 header {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - 16vw);
+    max-width: 1400px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
     box-sizing: border-box;
-    border-bottom: 1px solid var(--color-white);
-    background: rgba(14, 14, 14, 0.3);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid var(--color-white);
+    background: rgba(14, 14, 14, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius);
     z-index: 1000;
+    /* Compensate for <main>'s scrollbar gutter so the header stays
+       visually centered with the cards/content beneath it.
+       Chrome/Safari with overflow-y:overlay keep --scrollbar-w at 0. */
+    transform: translateX(calc(var(--scrollbar-w) / -2));
 }
 
 .hamburger-menu {
@@ -316,11 +329,17 @@ header a.nav-item.active {
 /* --- MAIN LAYOUT --- */
 main {
     position: absolute;
-    top: var(--header-height);
+    top: calc(var(--header-height) + 16px);
     left: 0;
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--header-height) - 16px);
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
+    /* `overlay` is non-standard but still respected by Chromium/WebKit:
+       the scrollbar floats on top of content and consumes zero layout
+       space, keeping cards centered with the fixed header.
+       Firefox ignores it and falls back to `auto` above; script.js
+       then compensates the header via --scrollbar-w. */
+    overflow-y: overlay;
     scroll-snap-type: y mandatory;
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
